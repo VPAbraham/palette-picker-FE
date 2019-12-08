@@ -3,8 +3,11 @@ import './Color.scss';
 
 const Color = (props) => {
   console.log(props)
+  const style = {
+    background: props.color
+  }
   return (
-    <div className={props.position} id="color">
+    <div className={props.position} style={style} id="color">
     </div>
   )
 }

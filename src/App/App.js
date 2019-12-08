@@ -17,12 +17,15 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    // getColors();
-    const apiUrl = 'http://thecolorapi.com/scheme?hex=24B1E0&mode=triad&count=5';
+    // this.setState({
+    //   color1: 'blue',
+    //   color2: 'green',
+    //   color3: 'yellow',
+    //   color4: 'red',
+    //   color5: 'purple'
+    // })
+    getColors()
 
-    const response = await fetch(apiUrl);
-    const rawColorData = await response.json();
-    console.log(rawColorData);
   }
 
 
