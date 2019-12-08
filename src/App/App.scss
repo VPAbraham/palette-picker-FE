@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  // border: 1px solid red;
 }
 
 .App {
@@ -15,3 +14,13 @@
   }
 }
 
+.Modal {
+  padding: 5%;
+  height: 100%;
+  width: 100%;
+}
+
+.modalplus {
+  float: right;
+  width: 2em;
+}

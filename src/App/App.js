@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import './App.scss';
 import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
+import blackPlus from '../assets/images/plus_black.svg';
 // Modal.setAppElement('#yourAppElement')
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
 
 class App extends Component {
   constructor() {
@@ -56,9 +45,14 @@ class App extends Component {
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
+          className="Modal"
           contentLabel="Example Modal"
-        />
+        >
+          <img src={blackPlus} onClick={this.closeModal} alt="black plus symbol" className="modalplus"/>
+          <h1>SAVE PALETTE</h1>
+          <h1>CREATE NEW PROJECT</h1>
+          <h1>VIEW ALL PROJECTS</h1>
+        </Modal>
         <main>
           <Palette
             color1={this.state.color1}
