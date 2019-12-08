@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.palette-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  width: 50%;
+}
+
+h2 {
+  color: rgb(189, 189, 189);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  letter-spacing: 15px;
+  line-height: 55px;
+  text-align: left;
+}
+
+input {
+  padding: 1em;
+}
+
+button {
+  margin: 2em 0 2em 0;
+  padding: 1em;
+  width: 25%
+}

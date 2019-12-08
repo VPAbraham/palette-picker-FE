@@ -4,7 +4,6 @@ import blackPlus from '../assets/images/plus_black.svg';
 import refresh from '../assets/images/refresh.svg';
 
 const Nav = (props) => {
-  console.log(props)
   return (
     <header className="Nav">
       <div>

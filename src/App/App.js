@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import './App.scss';
 import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
+import PaletteForm from '../PaletteForm/PaletteForm';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
 // Modal.setAppElement('#yourAppElement')
@@ -48,6 +49,7 @@ class App extends Component {
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>SAVE PALETTE</h1>
             </div>
+            <PaletteForm />
             <div className="menu-items">
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>CREATE NEW PROJECT</h1>

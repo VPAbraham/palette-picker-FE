@@ -38,6 +38,11 @@ h1 {
   text-align: left;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu-items {
   display: flex;
   flex-direction: row;
