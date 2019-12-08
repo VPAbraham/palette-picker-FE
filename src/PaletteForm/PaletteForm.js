@@ -6,7 +6,17 @@ class PaletteForm extends Component {
     super();
     this.state = {
       paletteName: '',
-      projectName: ''
+      projectName: '',
+      error: ''
+    }
+  }
+
+  submitForm = (e) => {
+    e.preventDefault();
+    if (!this.state.paletteName && !this.state.projectName) {
+      this.setState({error: "Please fill out all inputs to log in."})
+    } else {
+      // send up to app state
     }
   }
 
@@ -16,13 +26,13 @@ class PaletteForm extends Component {
 
   render() {
     return(
-      <form className="palette-form"> 
+      <form className="palette-form">
         <h2>PALETTE NAME</h2>
         <input
           className="palette-name-input"
           type="text"
           placeholder="Enter Palette Name"
-          name="palette-name"
+          name="paletteName"
           value={this.state.paletteName}
           onChange={this.handleChange}
         />
