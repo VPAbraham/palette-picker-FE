@@ -23,7 +23,7 @@
   width: 100%;
 }
 
-.modalplus {
+.modalClose {
   float: right;
   width: 3em;
 }
@@ -36,4 +36,14 @@ h1 {
   letter-spacing: 15px;
   line-height: 55px;
   text-align: left;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.modalPlus {
+  margin-right: 24px;
+  width: 1.5em;
 }
