@@ -21,7 +21,13 @@ class PaletteForm extends Component {
   }
 
   handleChange = (e) => {
+    e.preventDefault();
     this.setState({[e.target.name]: e.target.value})
+  }
+
+  handleClick = (e) => {
+    e.preventDefault();
+    console.log('hello')
   }
 
   render() {
@@ -37,6 +43,13 @@ class PaletteForm extends Component {
           onChange={this.handleChange}
         />
         <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
+        <h2>SELECT PROJECT</h2>
+        <div className="dropdown">
+          <button className="drop-menu">Select Project</button>
+          <div className="dropdown-content">
+            <a onClick={this.handleClick}>Link 1</a>
+          </div>
+        </div>
       </form>
     )
   }
