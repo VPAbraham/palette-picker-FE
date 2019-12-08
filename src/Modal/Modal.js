@@ -1,20 +1,25 @@
 // import React from 'react';
-// import ReactDOM from 'react-dom';
 // import './Modal.scss';
+// import Modal from 'react-modal';
 //
 // const Modal = (props) => {
 //   return (
 //     <div className="modal">
-//       <h2>Hello</h2>
-//       <button onClick={props.closeModal}>close</button>
-//       <div>I am a modal</div>
-//       <form>
-//         <input />
-//         <button>tab navigation</button>
-//         <button>stays</button>
-//         <button>inside</button>
-//         <button>the modal</button>
-//       </form>
+//     <img src={whiteClose} onClick={this.closeModal} alt="white x symbol" className="modalClose"/>
+//     <section className="menu">
+//       <div className="menu-items">
+//         <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
+//         <h1>SAVE PALETTE</h1>
+//       </div>
+//       <div className="menu-items">
+//         <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
+//         <h1>CREATE NEW PROJECT</h1>
+//       </div>
+//       <div className="menu-items">
+//         <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
+//         <h1>VIEW ALL PROJECTS</h1>
+//       </div>
+//           </section>
 //     </div>
 //   )
 // }
