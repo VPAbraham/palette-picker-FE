@@ -49,9 +49,17 @@ class App extends Component {
           contentLabel="Example Modal"
         >
           <img src={blackPlus} onClick={this.closeModal} alt="black plus symbol" className="modalplus"/>
-          <h1>SAVE PALETTE</h1>
-          <h1>CREATE NEW PROJECT</h1>
-          <h1>VIEW ALL PROJECTS</h1>
+          <section className="menu">
+            <div className="menu-items">
+              <h1>SAVE PALETTE</h1>
+            </div>
+            <div className="menu-items">
+              <h1>CREATE NEW PROJECT</h1>
+            </div>
+            <div className="menu-items">
+              <h1>VIEW ALL PROJECTS</h1>
+            </div>
+          </section>
         </Modal>
         <main>
           <Palette
