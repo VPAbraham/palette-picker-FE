@@ -6,6 +6,17 @@ import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
 // Modal.setAppElement('#yourAppElement')
 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 class App extends Component {
   constructor() {
     super()
@@ -28,7 +39,7 @@ class App extends Component {
 
   afterOpenModal() {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
+    // this.subtitle.style.color = '#f00';
   }
 
   closeModal() {
@@ -41,7 +52,13 @@ class App extends Component {
         <Nav
           openModal={this.openModal}
         />
-        <Modal />
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        />
         <main>
           <Palette
             color1={this.state.color1}
