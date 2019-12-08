@@ -24,7 +24,7 @@ input {
 
 .save-palette {
   font-size: 16px;
-  margin: 1.5em 0 2em 0;
+  margin: 6em 0 2em 0;
   padding: 1em;
   width: 25%
 }
@@ -60,8 +60,14 @@ input {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+p {
+  color: #FFFFFF;
+}
