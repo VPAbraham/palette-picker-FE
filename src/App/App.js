@@ -34,7 +34,14 @@ class App extends Component {
   }
 
   saveNewPalette = (newPalette) => {
-    this.setState({ palettes: [newPalette] });
+    newPalette.color1 = this.state.color1;
+    newPalette.color2 = this.state.color2;
+    newPalette.color3 = this.state.color3;
+    newPalette.color4 = this.state.color4;
+    newPalette.color5 = this.state.color5;
+    let palettes = this.state.palettes;
+    let updatedPalettes = {...palettes, newPalette}
+    this.setState({ palettes: updatedPalettes });
   }
 
   render() {
