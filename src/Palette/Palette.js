@@ -12,9 +12,13 @@ class Palette extends Component {
 
   render() {
     return (
-      <div>
-        
-      </div>
+      <section className="palette">
+        <Color color="color1`"/>
+        <Color color="color2"/>
+        <Color color="color3"/>
+        <Color color="color4"/>
+        <Color color="color5"/>
+      </section>
     )
   }
 }
