@@ -3,7 +3,6 @@
 .Nav {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 25px;
-  font-weight: 100;
   display: flex;
   justify-content: space-between;
 
@@ -13,12 +12,15 @@
     h1 {
       color: rgb(189, 189, 189);
       font-size: 2em;
+      font-weight: 800;
       text-align: left;
       line-height: 55px;
 
       span {
+
         img {
-          width: 1em;
+          width: .85em;
+          margin: 1px 12px 0px 0px;
         }
       }
     }
@@ -29,11 +31,11 @@
   section {
     margin: 3em 5em;
     display: flex;
-    width: 15%;
+    width: 10%;
     justify-content: space-between;
 
     img {
-      width: 4em;
+      width: 4vw;
     }
   }
 }
