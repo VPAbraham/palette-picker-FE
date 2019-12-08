@@ -33,17 +33,6 @@ class App extends Component {
     this.setState({ modalIsOpen: false });
   }
 
-  saveNewPalette = (newPalette) => {
-    newPalette.color1 = this.state.color1;
-    newPalette.color2 = this.state.color2;
-    newPalette.color3 = this.state.color3;
-    newPalette.color4 = this.state.color4;
-    newPalette.color5 = this.state.color5;
-    let palettes = this.state.palettes;
-    let updatedPalettes = {...palettes, newPalette}
-    this.setState({ palettes: updatedPalettes });
-  }
-
   render() {
     return(
       <div className="App">
@@ -62,7 +51,13 @@ class App extends Component {
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>SAVE PALETTE</h1>
             </div>
-            <PaletteForm saveNewPalette={this.saveNewPalette}/>
+            <PaletteForm
+              color1={this.state.color1}
+              color2={this.state.color2}
+              color3={this.state.color3}
+              color4={this.state.color4}
+              color5={this.state.color5}
+            />
             <div className="menu-items">
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>CREATE NEW PROJECT</h1>

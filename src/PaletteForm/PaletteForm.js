@@ -19,14 +19,14 @@ class PaletteForm extends Component {
     } else {
       let newPalette = {
         projectName: this.state.projectName,
-        name: this.state.paletteName
-        // color1: <String>,
-        // color2: <String>,
-        // color3: <String>,
-        // color4: <String>,
-        // color5: <String>
+        name: this.state.paletteName,
+        color1: this.props.color1,
+        color2: this.props.color2,
+        color3: this.props.color3,
+        color4: this.props.color4,
+        color5: this.props.color5
       }
-      this.props.saveNewPalette(newPalette)
+      // POST to the DB
     }
   }
 
