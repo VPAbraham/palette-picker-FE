@@ -2,7 +2,6 @@ import React from 'react';
 import './Color.scss';
 
 const Color = (props) => {
-  console.log(props)
   const style = {
     background: props.color
   }

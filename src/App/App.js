@@ -12,7 +12,7 @@ class App extends Component {
       color2: 'green',
       color3: 'yellow',
       color4: 'red',
-      color5: 'purple'
+      color5: 'purple',
     }
   }
 
@@ -24,8 +24,14 @@ class App extends Component {
     //   color4: 'red',
     //   color5: 'purple'
     // })
-    getColors()
-
+    const newPalette = await getColors()
+    this.setState({
+      color1: newPalette[0],
+      color2: newPalette[1],
+      color3: newPalette[2],
+      color4: newPalette[3],
+      color5: newPalette[4]
+    })
   }
 
 
