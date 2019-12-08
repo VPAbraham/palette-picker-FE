@@ -27,6 +27,8 @@ class PaletteForm extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
+    var selectedProject = document.querySelector(".drop-menu");
+    selectedProject.innerText = e.target.innerText
     this.setState({ projectName: e.target.innerText })
   }
 
