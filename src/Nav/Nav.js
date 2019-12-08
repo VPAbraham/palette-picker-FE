@@ -7,7 +7,14 @@ const Nav = () => {
   return (
     <header className="Nav">
       <div>
-        <h1>PALETTE</h1>
+        <h1>PALE
+          <span>
+            <img src={blackPlus} alt="plus sign"/>
+          </span>
+          <span>
+            <img src={blackPlus} alt="plus sign" />
+          </span>    
+          E</h1>
         <h1>PICKER</h1>
       </div>
       <section className="nav-controls">

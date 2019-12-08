@@ -18,13 +18,16 @@ class App extends Component {
     return(
       <div className="App">
         <Nav />
-        <Palette 
-        color1={this.state.color1} 
-        color2={this.state.color2}
-        color3={this.state.color3}
-        color4={this.state.color4} 
-        color5={this.state.color5}
-         />
+        <main>
+          <Palette
+            color1={this.state.color1}
+            color2={this.state.color2}
+            color3={this.state.color3}
+            color4={this.state.color4}
+            color5={this.state.color5}
+          />
+        </main>
+       
       </div>
     );
   }

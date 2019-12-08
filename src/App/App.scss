@@ -6,4 +6,12 @@
 
 .App {
   text-align: center;
+
+  main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20vh;
+  }
 }
+
