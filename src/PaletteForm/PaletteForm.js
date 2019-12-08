@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import './PaletteForm.scss';
 
 class PaletteForm extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       paletteName: '',
       projectName: '',
       error: ''
     }
+    this.props = props;
   }
 
   submitForm = (e) => {
@@ -16,7 +17,16 @@ class PaletteForm extends Component {
     if (!this.state.paletteName && !this.state.projectName) {
       this.setState({ error: "Please fill out all inputs to log in."} )
     } else {
-      // send up to app state
+      let newPalette = {
+        projectName: this.state.projectName,
+        name: this.state.paletteName
+        // color1: <String>,
+        // color2: <String>,
+        // color3: <String>,
+        // color4: <String>,
+        // color5: <String>
+      }
+      this.props.saveNewPalette(newPalette)
     }
   }
 

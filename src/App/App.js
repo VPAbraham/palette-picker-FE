@@ -17,18 +17,24 @@ class App extends Component {
       color3: 'yellow',
       color4: 'red',
       color5: 'purple',
-      modalIsOpen: false
+      modalIsOpen: false,
+      palettes: [],
+      projects: []
     }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   openModal() {
-    this.setState({modalIsOpen: true});
+    this.setState({ modalIsOpen: true });
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({ modalIsOpen: false });
+  }
+
+  saveNewPalette = (newPalette) => {
+    this.setState({ palettes: [newPalette] });
   }
 
   render() {
@@ -49,7 +55,7 @@ class App extends Component {
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>SAVE PALETTE</h1>
             </div>
-            <PaletteForm />
+            <PaletteForm saveNewPalette={this.saveNewPalette}/>
             <div className="menu-items">
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>CREATE NEW PROJECT</h1>
