@@ -7,7 +7,7 @@ import { getColors } from '../apiCalls/apiCallsColors';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
-// Modal.setAppElement('#yourAppElement')
+Modal.setAppElement('#root')
 
 class App extends Component {
   constructor() {
@@ -54,7 +54,7 @@ class App extends Component {
 
   render() {
     return(
-      <div className="App">
+      <div className="App" id="root">
         <Nav
           openModal={this.openModal}
           refreshColors={this.refreshColors}

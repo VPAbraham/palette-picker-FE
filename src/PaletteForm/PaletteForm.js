@@ -26,6 +26,7 @@ class PaletteForm extends Component {
         color4: this.props.color4,
         color5: this.props.color5
       }
+      console.log('newPalette', newPalette)
       // POST to the DB
       this.resetAllInputs()
     }
