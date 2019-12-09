@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PaletteForm.scss';
+import { postPalette } from '../apiCalls/apiCalls';
 
 class PaletteForm extends Component {
   constructor(props) {
@@ -32,8 +33,7 @@ class PaletteForm extends Component {
         color4: this.props.color4,
         color5: this.props.color5
       }
-      console.log('newPalette', newPalette)
-      // this.handlePOST()
+      postPalette(newPalette)
       this.resetAllInputs()
     }
   }
@@ -49,10 +49,6 @@ class PaletteForm extends Component {
     selectedProject.innerText = e.target.innerText
     this.setState({ projectName: e.target.innerText })
   }
-
-  // handlePOST = () => {
-  //
-  // }
 
   resetAllInputs = () => {
     var selectedProject = document.querySelector(".drop-menu");

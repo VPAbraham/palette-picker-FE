@@ -7,3 +7,17 @@ export const getPalettes = () => {
   return fetch('http://palette-pick-be.herokuapp.com/api/v1/palettes')
     .then(res => res.json())
 }
+
+export const postPalette = async (newPalette) => {
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(newPalette),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/palettes`, options)
+  const data = await response.json();
+    return data
+}
