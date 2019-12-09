@@ -7,6 +7,7 @@ import { getColors } from '../apiCalls/apiCallsColors';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
+import { getProjects, getPalettes } from '../apiCalls/apiCalls';
 Modal.setAppElement('#root')
 
 class App extends Component {
@@ -30,6 +31,14 @@ class App extends Component {
     const newPalette = await getColors();
     this.setState({
       randomizedPalette: newPalette
+    });
+    const allProjects = await getProjects();
+    this.setState({
+      projects: allProjects
+    });
+    const allPalettes = await getPalettes();
+    this.setState({
+      palettes: allPalettes
     });
   }
 
