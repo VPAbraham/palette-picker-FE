@@ -16,7 +16,6 @@ export const postPalette = async (newPalette) => {
       'Content-Type': 'application/json'
     }
   }
-
   const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/palettes`, options)
   const data = await response.json();
     return data

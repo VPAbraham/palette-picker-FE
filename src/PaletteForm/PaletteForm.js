@@ -19,29 +19,27 @@ class PaletteForm extends Component {
     })
   }
 
-  // getSelectedProjectId = () => {
-  //   let selectedProject = this.props.projects.find((project) => {
-  //     return project.name === this.state.projectName
-  //   })
-  //   return selectedProject.id
-  // }
+  getSelectedProjectId = () => {
+    let selectedProject = this.props.projects.find((project) => {
+      return project.name === this.state.projectName
+    })
+    return selectedProject.id
+  }
 
   submitForm = (e) => {
     e.preventDefault();
     if (!this.state.paletteName && !this.state.projectName) {
       this.setState({ error: "Please fill out all inputs to log in."} )
     } else {
-      // where to put project id?
       let newPalette = {
         name: this.state.paletteName,
-        // projects_id: this.getSelectedProjectId(),
+        projects_id: this.getSelectedProjectId(),
         color1: this.props.color1,
         color2: this.props.color2,
         color3: this.props.color3,
         color4: this.props.color4,
         color5: this.props.color5
       }
-      console.log('new', newPalette)
       postPalette(newPalette)
       this.resetAllInputs()
     }
