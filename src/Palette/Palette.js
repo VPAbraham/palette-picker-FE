@@ -6,7 +6,6 @@ class Palette extends Component {
   constructor() {
     super()
     this.state = {
-      colors: [],
       color1: '',
       color2: '',
       color3: '',
@@ -16,10 +15,21 @@ class Palette extends Component {
   }
 
   componentDidMount() {
-    const { colors, color1, color2, color3, color4, color5 } = this.props;
+    const { color1, color2, color3, color4, color5 } = this.props;
     this.setState({
-      colors,
       color1,
+      color2,
+      color3,
+      color4,
+      color5
+    })
+  }
+
+  componentWillReceiveProps() {
+    const { color1, color2, color3, color4, color5 } = this.props;
+    console.log(this.props)
+    this.setState({
+      color1: color1,
       color2,
       color3,
       color4,
@@ -30,7 +40,7 @@ class Palette extends Component {
   render() {
     return (
       <section className="palette">
-        <Color position="color1" colors={this.state.colors} color={this.state.color1}/>
+        <Color position="color1" color={this.state.color1}/>
         <Color position="color2" color={this.state.color2}/>
         <Color position="color3" color={this.state.color3}/>
         <Color position="color4" color={this.state.color4}/>
