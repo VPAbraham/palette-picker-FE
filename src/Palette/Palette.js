@@ -25,17 +25,19 @@ class Palette extends Component {
     })
   }
 
-  componentWillReceiveProps() {
-    const { color1, color2, color3, color4, color5 } = this.props;
-    console.log(this.props)
-    this.setState({
-      color1: color1,
-      color2,
-      color3,
-      color4,
-      color5
-    })
+  static getDerivedStateFromProps(nextProps, prevState){
+    const { color1, color2, color3, color4, color5 } = nextProps;
+    if(nextProps.color1 !== prevState.color1) {
+      return {
+        color1: color1,
+        color2: color2,
+        color3: color3,
+        color4: color4,
+        color5: color5,
+      }
+    }
   }
+  
 
   render() {
     return (
