@@ -13,11 +13,11 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      color1: 'blue',
-      color2: 'green',
-      color3: 'yellow',
-      color4: 'red',
-      color5: 'purple',
+      color1: '#baddc3',
+      color2: '#ff6767',
+      color3: '#ffe596',
+      color4: '#b3e6ff',
+      color5: '#41406d',
       modalIsOpen: false,
       palettes: [],
       projects: []
