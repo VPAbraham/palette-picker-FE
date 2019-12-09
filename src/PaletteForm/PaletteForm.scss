@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.palette-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  width: 75%;
+}
+
+h2 {
+  color: rgb(189, 189, 189);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  letter-spacing: 15px;
+  line-height: 55px;
+  text-align: left;
+}
+
+input {
+  border: none;
+  font-size: 16px;
+  padding: 1em;
+}
+
+.save-palette {
+  font-size: 16px;
+  margin: 6em 0 2em 0;
+  padding: 1em;
+  width: 25%
+}
+
+.drop-menu {
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  font-size: 16px;
+  padding: 1em;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-content {
+  background-color: #FFFFFF;
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+p {
+  color: grey;
+}

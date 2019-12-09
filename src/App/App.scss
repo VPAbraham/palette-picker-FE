@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
-  // border: 1px solid red;
 }
 
 .App {
@@ -15,3 +16,39 @@
   }
 }
 
+.Modal {
+  background-color: #000000;
+  padding: 8%;
+  height: 100%;
+  width: 100%;
+}
+
+.modalClose {
+  float: right;
+  width: 3em;
+}
+
+h1 {
+  color: rgb(189, 189, 189);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 15px;
+  line-height: 55px;
+  text-align: left;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.modalPlus {
+  margin-right: 24px;
+  width: 1.5em;
+}

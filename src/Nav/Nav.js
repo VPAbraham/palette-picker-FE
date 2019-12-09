@@ -20,7 +20,7 @@ const Nav = (props) => {
           </span>
           <span>
             <img src={blackPlus} alt="plus sign" />
-          </span>    
+          </span>
           E</h1>
         <h1>PICKER</h1>
       </div>
@@ -30,7 +30,12 @@ const Nav = (props) => {
         alt="refresh icon" 
         onClick={event => colorChange(event)}
         />
-        <img className="add-project" src={blackPlus} alt="black plus symbol"/>
+        <img 
+        className="add-project" 
+        src={blackPlus} 
+        alt="black plus symbol"
+        onClick={props.openModal}
+        />
       </section>
     </header>
   )
