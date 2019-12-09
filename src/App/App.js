@@ -7,7 +7,8 @@ import { getColors } from '../apiCalls/apiCallsColors';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
-// Modal.setAppElement('#yourAppElement')
+import { getProjects, getPalettes } from '../apiCalls/apiCalls';
+Modal.setAppElement('#root')
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,14 @@ class App extends Component {
     const newPalette = await getColors();
     this.setState({
       randomizedPalette: newPalette
+    });
+    const allProjects = await getProjects();
+    this.setState({
+      projects: allProjects
+    });
+    const allPalettes = await getPalettes();
+    this.setState({
+      palettes: allPalettes
     });
   }
 
@@ -54,7 +63,7 @@ class App extends Component {
 
   render() {
     return(
-      <div className="App">
+      <div className="App" id="root">
         <Nav
           openModal={this.openModal}
           refreshColors={this.refreshColors}
@@ -77,6 +86,7 @@ class App extends Component {
               color3={this.state.color3}
               color4={this.state.color4}
               color5={this.state.color5}
+              projects={this.state.projects}
             />
             <div className="menu-items">
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>

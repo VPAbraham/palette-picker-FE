@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PaletteForm.scss';
+import { postPalette } from '../apiCalls/apiCalls';
 
 class PaletteForm extends Component {
   constructor(props) {
@@ -12,6 +13,19 @@ class PaletteForm extends Component {
     this.props = props;
   }
 
+  getProjectNames = () => {
+    return this.props.projects.map((project) => {
+      return <a onClick={this.handleClick}>{project.name}</a>
+    })
+  }
+
+  // getSelectedProjectId = () => {
+  //   let selectedProject = this.props.projects.find((project) => {
+  //     return project.name === this.state.projectName
+  //   })
+  //   return selectedProject.id
+  // }
+
   submitForm = (e) => {
     e.preventDefault();
     if (!this.state.paletteName && !this.state.projectName) {
@@ -20,13 +34,15 @@ class PaletteForm extends Component {
       // where to put project id?
       let newPalette = {
         name: this.state.paletteName,
+        // projects_id: this.getSelectedProjectId(),
         color1: this.props.color1,
         color2: this.props.color2,
         color3: this.props.color3,
         color4: this.props.color4,
         color5: this.props.color5
       }
-      // POST to the DB
+      console.log('new', newPalette)
+      postPalette(newPalette)
       this.resetAllInputs()
     }
   }
@@ -53,6 +69,10 @@ class PaletteForm extends Component {
     })
   }
 
+  doNothing = (e) => {
+    e.preventDefault();
+  }
+
   render() {
     return(
       <form className="palette-form">
@@ -67,12 +87,12 @@ class PaletteForm extends Component {
         />
         <h2>SELECT PROJECT</h2>
         <div className="dropdown">
-          <button className="drop-menu">Select Project</button>
+          <button className="drop-menu" onClick={(e) => this.doNothing(e)}>Select Project</button>
           <div className="dropdown-content">
-            <a onClick={this.handleClick}>Neature</a>
+            {this.getProjectNames()}
           </div>
-          <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
         </div>
+        <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
       </form>
     )
   }
