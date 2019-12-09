@@ -26,8 +26,6 @@ class Palette extends Component {
   }
 
   render() {
-    console.log(this.props)
-
     return (
       <section className="palette">
         <Color position="color1" color={this.state.color1}/>
