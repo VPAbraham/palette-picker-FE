@@ -12,6 +12,12 @@ class PaletteForm extends Component {
     this.props = props;
   }
 
+  getProjectNames = () => {
+    return this.props.projects.map((project) => {
+      return <a onClick={this.handleClick}>{project.name}</a>
+    })
+  }
+
   submitForm = (e) => {
     e.preventDefault();
     if (!this.state.paletteName && !this.state.projectName) {
@@ -27,7 +33,7 @@ class PaletteForm extends Component {
         color5: this.props.color5
       }
       console.log('newPalette', newPalette)
-      // POST to the DB
+      // this.handlePOST()
       this.resetAllInputs()
     }
   }
@@ -43,6 +49,10 @@ class PaletteForm extends Component {
     selectedProject.innerText = e.target.innerText
     this.setState({ projectName: e.target.innerText })
   }
+
+  // handlePOST = () => {
+  //
+  // }
 
   resetAllInputs = () => {
     var selectedProject = document.querySelector(".drop-menu");
@@ -74,7 +84,7 @@ class PaletteForm extends Component {
         <div className="dropdown">
           <button className="drop-menu" onClick={(e) => this.doNothing(e)}>Select Project</button>
           <div className="dropdown-content">
-            <a onClick={this.handleClick}>Neature</a>
+            {this.getProjectNames()}
           </div>
         </div>
         <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>

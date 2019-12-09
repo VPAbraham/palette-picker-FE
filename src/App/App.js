@@ -86,6 +86,7 @@ class App extends Component {
               color3={this.state.color3}
               color4={this.state.color4}
               color5={this.state.color5}
+              projects={this.state.projects}
             />
             <div className="menu-items">
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
