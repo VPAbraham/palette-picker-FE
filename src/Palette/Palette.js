@@ -3,7 +3,7 @@ import Color from '../Color/Color';
 import './Palette.scss';
 
 class Palette extends Component {
-  constructor(props) {
+  constructor() {
     super()
     this.state = {
       color1: '',
@@ -18,6 +18,18 @@ class Palette extends Component {
     const { color1, color2, color3, color4, color5 } = this.props;
     this.setState({
       color1,
+      color2,
+      color3,
+      color4,
+      color5
+    })
+  }
+
+  componentWillReceiveProps() {
+    const { color1, color2, color3, color4, color5 } = this.props;
+    console.log(this.props)
+    this.setState({
+      color1: color1,
       color2,
       color3,
       color4,

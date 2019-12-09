@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import './App.scss';
 import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
+import { getColors } from '../apiCalls/apiCallsColors';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
@@ -25,6 +26,24 @@ class App extends Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  async componentDidMount() {
+    const newPalette = await getColors();
+    this.setState({
+      randomizedPalette: newPalette
+    });
+  }
+
+  refreshColors = async () => {
+    const { randomizedPalette } = this.state;
+    this.setState({
+      color1: randomizedPalette[0],
+      color2: randomizedPalette[1],
+      color3: randomizedPalette[2],
+      color4: randomizedPalette[3],
+      color5: randomizedPalette[4]
+    });
+  };
+
   openModal() {
     this.setState({ modalIsOpen: true });
   }
@@ -38,6 +57,7 @@ class App extends Component {
       <div className="App">
         <Nav
           openModal={this.openModal}
+          refreshColors={this.refreshColors}
         />
         <Modal
           isOpen={this.state.modalIsOpen}

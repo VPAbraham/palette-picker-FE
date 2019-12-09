@@ -4,6 +4,13 @@ import blackPlus from '../assets/images/plus_black.svg';
 import refresh from '../assets/images/refresh.svg';
 
 const Nav = (props) => {
+
+  const colorChange = (e) => {
+    e.preventDefault();
+    props.refreshColors();
+    
+  }
+
   return (
     <header className="Nav">
       <div>
@@ -18,8 +25,17 @@ const Nav = (props) => {
         <h1>PICKER</h1>
       </div>
       <section className="nav-controls">
-        <img src={refresh} alt="refresh icon" />
-        <img src={blackPlus} onClick={props.openModal} alt="black plus symbol"/>
+        <img className="refresh" 
+        src={refresh} 
+        alt="refresh icon" 
+        onClick={event => colorChange(event)}
+        />
+        <img 
+        className="add-project" 
+        src={blackPlus} 
+        alt="black plus symbol"
+        onClick={props.openModal}
+        />
       </section>
     </header>
   )
