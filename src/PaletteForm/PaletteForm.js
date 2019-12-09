@@ -76,8 +76,8 @@ class PaletteForm extends Component {
           <div className="dropdown-content">
             <a onClick={this.handleClick}>Neature</a>
           </div>
-          <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
         </div>
+        <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
       </form>
     )
   }
