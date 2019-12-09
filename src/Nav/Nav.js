@@ -18,8 +18,8 @@ const Nav = () => {
         <h1>PICKER</h1>
       </div>
       <section className="nav-controls">
-        <img src={refresh} alt="refresh icon" />
-        <img src={blackPlus} alt="black plus symbol"/>
+        <img className="refresh" src={refresh} alt="refresh icon" />
+        <img className="add-project" src={blackPlus} alt="black plus symbol"/>
       </section>
     </header>
   )

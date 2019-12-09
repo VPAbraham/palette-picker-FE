@@ -13,26 +13,31 @@ class App extends Component {
       color3: 'yellow',
       color4: 'red',
       color5: 'purple',
+      randomizedPalette: null
     }
   }
 
   async componentDidMount() {
-    // this.setState({
-    //   color1: 'blue',
-    //   color2: 'green',
-    //   color3: 'yellow',
-    //   color4: 'red',
-    //   color5: 'purple'
-    // })
-    const newPalette = await getColors()
+    const newPalette = await getColors();
     this.setState({
-      color1: newPalette[0],
-      color2: newPalette[1],
-      color3: newPalette[2],
-      color4: newPalette[3],
-      color5: newPalette[4]
-    })
+      randomizedPalette: newPalette
+    });
   }
+
+  componentDidUpdate() {
+    const { randomizedPalette } = this.state;
+    if(randomizedPalette === null){
+      this.setState({
+        color1: randomizedPalette[0],
+        color2: randomizedPalette[1],
+        color3: randomizedPalette[2],
+        color4: randomizedPalette[3],
+        color5: randomizedPalette[4]
+      });
+    };
+  };
+
+
 
 
   render() {
@@ -41,6 +46,7 @@ class App extends Component {
         <Nav />
         <main>
           <Palette
+            colors={this.state.randomizedPalette}
             color1={this.state.color1}
             color2={this.state.color2}
             color3={this.state.color3}
@@ -48,7 +54,6 @@ class App extends Component {
             color5={this.state.color5}
           />
         </main>
-       
       </div>
     );
   }

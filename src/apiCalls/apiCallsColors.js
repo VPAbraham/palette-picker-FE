@@ -7,7 +7,6 @@ export const getColors = async () => {
   let colors = await rawColorData.colors.map(color => {
     let hexNum = color.hex;
     let hexCode = '#' + hexNum;
-    console.log(hexCode);
     return hexCode;
   })
 

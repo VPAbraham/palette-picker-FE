@@ -17,7 +17,7 @@
       line-height: 55px;
 
       span {
-
+        
         img {
           width: .85em;
           margin: 1px 12px 0px 0px;
@@ -34,8 +34,17 @@
     width: 10%;
     justify-content: space-between;
 
-    img {
+    .add-project,
+    .refresh {
       width: 4vw;
+    }
+
+    .refresh {
+      transition: .5s;
+
+      &:hover {
+        transform: rotate(1turn);
+      }
     }
   }
 }
