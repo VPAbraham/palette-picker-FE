@@ -54,6 +54,10 @@ class PaletteForm extends Component {
     })
   }
 
+  doNothing = (e) => {
+    e.preventDefault();
+  }
+
   render() {
     return(
       <form className="palette-form">
@@ -68,7 +72,7 @@ class PaletteForm extends Component {
         />
         <h2>SELECT PROJECT</h2>
         <div className="dropdown">
-          <button className="drop-menu">Select Project</button>
+          <button className="drop-menu" onClick={(e) => this.doNothing(e)}>Select Project</button>
           <div className="dropdown-content">
             <a onClick={this.handleClick}>Neature</a>
           </div>
