@@ -27,20 +27,18 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const newPalette = await getColors();
-    this.setState({
-      randomizedPalette: newPalette
-    });
   }
 
   refreshColors = async () => {
+    const newPalette = await getColors();
+
     const { randomizedPalette } = this.state;
     this.setState({
-      color1: randomizedPalette[0],
-      color2: randomizedPalette[1],
-      color3: randomizedPalette[2],
-      color4: randomizedPalette[3],
-      color5: randomizedPalette[4]
+      color1: newPalette[0],
+      color2: newPalette[1],
+      color3: newPalette[2],
+      color4: newPalette[3],
+      color5: newPalette[4]
     });
   };
 
