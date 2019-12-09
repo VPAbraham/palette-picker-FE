@@ -17,8 +17,8 @@ class PaletteForm extends Component {
     if (!this.state.paletteName && !this.state.projectName) {
       this.setState({ error: "Please fill out all inputs to log in."} )
     } else {
+      // where to put project id?
       let newPalette = {
-        projectName: this.state.projectName,
         name: this.state.paletteName,
         color1: this.props.color1,
         color2: this.props.color2,
