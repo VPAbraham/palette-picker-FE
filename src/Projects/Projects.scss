@@ -1,0 +1,45 @@
+.Projects {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  width: 75%;
+}
+
+h2 {
+  color: rgb(189, 189, 189);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  letter-spacing: 15px;
+  line-height: 55px;
+  text-align: left;
+}
+
+h4 {
+  color: rgb(189, 189, 189);
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .75em;
+  letter-spacing: 7.5px;
+  line-height: 45px;
+  text-align: left;
+}
+
+p {
+  color: white;
+}
+
+.projList {
+  align-items: center;
+  display: flex;
+}
+
+.palList {
+  align-items: center;
+  display: flex;
+}
+
+.modal-delete {
+  border-radius: 0px;
+  height: 20px;
+}
