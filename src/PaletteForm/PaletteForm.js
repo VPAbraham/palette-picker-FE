@@ -84,6 +84,7 @@ class PaletteForm extends Component {
           className="modalPlus" />
           <h1>SAVE PALETTE</h1>
         </div>
+        {this.state.savingPalette && 
         <div>
           <h2>PALETTE NAME</h2>
           <input
@@ -102,7 +103,8 @@ class PaletteForm extends Component {
             </div>
           </div>
           <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
-        </div>  
+        </div>
+        }  
       </form>
     )
   }
