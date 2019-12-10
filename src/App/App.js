@@ -3,8 +3,9 @@ import Modal from 'react-modal';
 import './App.scss';
 import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
-import { getColors } from '../apiCalls/apiCallsColors';
+import Projects from '../Projects/Projects';
 import PaletteForm from '../PaletteForm/PaletteForm';
+import { getColors } from '../apiCalls/apiCallsColors';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
 import { getProjects, getPalettes } from '../apiCalls/apiCalls';
@@ -97,6 +98,10 @@ class App extends Component {
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>VIEW ALL PROJECTS</h1>
             </div>
+            <Projects
+              palettes={this.state.palettes}
+              projects={this.state.projects}
+            />
           </section>
         </Modal>
         <main>
