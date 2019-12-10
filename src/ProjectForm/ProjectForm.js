@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './ProjectForm.scss';
+import { postProject } from '../apiCalls/apiCalls';
 import whitePlus from '../assets/images/plus_white.svg';
 
 
@@ -7,7 +8,24 @@ class ProjectForm extends Component {
   constructor(props) {
     super();
     this.state = {
-      creatingProj: false
+      creatingProj: false,
+      newProjName: ''
+    }
+  }
+
+  handleChange = (e) => {
+    e.preventDefault();
+    this.setState({ newProjName: e.target.value })
+  }
+
+  submitProject = (e) => {
+    e.preventDefault();
+    if(this.newProjName !== 0) {
+      const projectObj = {
+        name: this.state.newProjName
+      }
+      console.log(projectObj)
+      postProject(projectObj)
     }
   }
 
@@ -24,8 +42,11 @@ class ProjectForm extends Component {
         </div>
         {this.state.creatingProj &&
         <div className="proj-name-input">
-          <input className="proj-name-input" placeholder="New Project Name"></input>
-          <button>SUBMIT</button>
+          <input className="proj-name-input" 
+          onChange={(e) => this.handleChange(e)}
+          placeholder="New Project Name">
+          </input>
+          <button onClick={(e) => this.submitProject(e)}>SUBMIT</button>
         </div>
         }
         <div className="menu-items">
