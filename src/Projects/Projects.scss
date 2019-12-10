@@ -6,6 +6,11 @@
   div {
     overflow-y: scroll;
   }
+
+  .color {
+    height: 5vh;
+    width: 5vh;
+  }
 }
 
 h2 {
@@ -45,9 +50,4 @@ p {
 .modal-delete {
   border-radius: 0px;
   height: 20px;
-}
-
-.color {
-  height: 1em;
-  width: 1em;
 }

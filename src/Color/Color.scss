@@ -8,12 +8,6 @@
   }
 }
 
-#colorSmall {
-  height: 5vh;
-  width: 5vh;
-  border-radius: 1px;
-}
-
 .color1 {
   grid-area: 1 / 2 / 2 / 3;
   background: green;
@@ -42,4 +36,9 @@
   grid-area: 3 / 2 / 4 / 3;
   background: salmon;
 
+}
+
+.small {
+  height: 5vh;
+  width: 5vh
 }

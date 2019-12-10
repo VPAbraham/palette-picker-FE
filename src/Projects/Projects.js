@@ -14,11 +14,11 @@ const Projects = (props) => {
       })
       let palmap = specPal.map((pal) => {
         return <div className="palList">
-          <Color key="1" id="colorSmall" className="color" color={pal.color1} />
-          <Color key="2" id="colorSmall" className="color" color={pal.color2} />
-          <Color key="3" id="colorSmall" className="color" color={pal.color3} />
-          <Color key="4" id="colorSmall" className="color" color={pal.color4} />
-          <Color key="5" id="colorSmall" className="color" color={pal.color5} />
+          <Color key="1" color={pal.color1} />
+          <Color key="2" color={pal.color2} />
+          <Color key="3" color={pal.color3} />
+          <Color key="4" color={pal.color4} />
+          <Color key="5" color={pal.color5} />
           <h4>{pal.name.toUpperCase()}</h4>
           <button className="modal-delete" onClick={() => deletePalette(pal.id)}>DELETE</button>
         </div>
