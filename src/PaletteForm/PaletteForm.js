@@ -8,7 +8,8 @@ class PaletteForm extends Component {
     this.state = {
       paletteName: '',
       projectName: '',
-      error: ''
+      error: '',
+      creatingProj: false
     }
     this.props = props;
   }

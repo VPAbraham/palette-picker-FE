@@ -21,7 +21,8 @@ class App extends Component {
       color5: '#41406d',
       modalIsOpen: false,
       palettes: [],
-      projects: []
+      projects: [],
+      creatingProj: false
     }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -88,11 +89,22 @@ class App extends Component {
               color4={this.state.color4}
               color5={this.state.color5}
               projects={this.state.projects}
+              key="palette-form"
             />
             <div className="menu-items">
-              <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
+              <img src={whitePlus} 
+              onClick={() => this.setState({creatingProj: !this.state.creatingProj})} 
+              alt="white plus symbol" 
+              className="modalPlus"
+              />
               <h1>CREATE NEW PROJECT</h1>
             </div>
+            {this.state.creatingProj&&
+              <div className="proj-name-input">
+                <input className="proj-name-input" placeholder="New Project Name"></input>
+                <button>SUBMIT</button>
+              </div>
+            }
             <div className="menu-items">
               <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
               <h1>VIEW ALL PROJECTS</h1>
@@ -106,6 +118,7 @@ class App extends Component {
             color3={this.state.color3}
             color4={this.state.color4}
             color5={this.state.color5}
+            key="palette"
           />
         </main>
       </div>

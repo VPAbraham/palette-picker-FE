@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+html {
+  background: rgb(242, 242, 242);
+}
+
 .App {
   text-align: center;
 
@@ -41,6 +45,22 @@ h1 {
 .menu {
   display: flex;
   flex-direction: column;
+
+  .proj-name-input {
+    width: 55%;
+
+    img {
+      width: 70%;
+      transition: .6s;
+    }
+
+    button {
+      font-size: 16px;
+      margin-left: 20px;
+      padding: 1em;
+      width: 30%;
+    }
+  }
 }
 
 .menu-items {
