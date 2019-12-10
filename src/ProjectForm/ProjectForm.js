@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './ProjectForm.scss';
+import Projects from '../Projects/Projects';
 import { postProject } from '../apiCalls/apiCalls';
 import whitePlus from '../assets/images/plus_white.svg';
 import whiteClose from '../assets/images/close_white.svg';
@@ -10,6 +11,7 @@ class ProjectForm extends Component {
     super();
     this.state = {
       creatingProj: false,
+      viewingProj: false,
       newProjName: ''
     }
   }
@@ -31,6 +33,7 @@ class ProjectForm extends Component {
   }
 
   render() {
+    console.log(this.props)
     return(
       <section className="project-form">
         <div className="menu-items">
@@ -51,10 +54,13 @@ class ProjectForm extends Component {
         </div>
         }
         <div className="menu-items">
-          
           <img src={whitePlus} alt="white plus symbol" className="modalPlus" />
           <h1>VIEW ALL PROJECTS</h1>
         </div>
+        <Projects
+          palettes={this.props.palettes}
+          projects={this.props.projects}
+        />
       </section>
     )
   }

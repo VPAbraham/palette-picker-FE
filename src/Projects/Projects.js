@@ -20,7 +20,9 @@ const Projects = (props) => {
 
   return (
     <section className="Projects">
-      {displayProjects()}
+      <div>
+        {displayProjects()}
+      </div>
     </section>
   )
 }

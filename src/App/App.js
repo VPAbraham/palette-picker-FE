@@ -92,8 +92,7 @@ class App extends Component {
               projects={this.state.projects}
               key="palette-form"
             />
-            <ProjectForm />
-            <Projects
+            <ProjectForm 
               palettes={this.state.palettes}
               projects={this.state.projects}
             />
