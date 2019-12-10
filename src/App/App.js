@@ -79,10 +79,7 @@ class App extends Component {
         >
           <img src={whiteClose} onClick={this.closeModal} alt="white x symbol" className="modalClose"/>
           <section className="menu">
-            <div className="menu-items">
-              <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
-              <h1>SAVE PALETTE</h1>
-            </div>
+            
             <PaletteForm
               color1={this.state.color1}
               color2={this.state.color2}
