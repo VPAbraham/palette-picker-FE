@@ -43,5 +43,12 @@ describe('apiCalls.js', () => {
       expect(window.fetch).toHaveBeenCalledWith(mockUrl)
     })
 
+    it('should return an array of projects (HAPPY)', () => {
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/projects'
+
+      getProjects(mockUrl)
+      .then(results => expect(results).toEqual(mockResponse))
+    })
+
   })
 })
