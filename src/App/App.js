@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 import './App.scss';
 import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
-import Projects from '../Projects/Projects';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import ProjectForm from '../ProjectForm/ProjectForm';
 import { getColors } from '../apiCalls/apiCallsColors';
@@ -64,8 +63,15 @@ class App extends Component {
     this.setState({ modalIsOpen: false });
   };
 
-  selectPalette() {
-  }
+  selectPalette = (color1, color2, color3, color4, color5) => {
+    this.setState({
+      color1: color1,
+      color2: color2,
+      color3: color3,
+      color4: color4,
+      color5: color5
+    });
+  };
 
   render() {
     return(

@@ -14,7 +14,7 @@ const Projects = (props) => {
       })
       let palmap = specPal.map((pal) => {
         return <div className="palList">
-          <div className="all-swatches" onClick={props.selectPalette}>
+          <div className="all-swatches" onClick={() => props.selectPalette(pal.color1, pal.color2, pal.color3, pal.color4, pal.color5)}>
             <ColorSmall key="1" color={pal.color1} />
             <ColorSmall key="2" color={pal.color2} />
             <ColorSmall key="3" color={pal.color3} />
