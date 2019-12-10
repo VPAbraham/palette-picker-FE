@@ -31,3 +31,16 @@ export const deletePalette = async (paletteId) => {
   const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/palettes/${paletteId}`, options);
   return response
 }
+
+export const postProject = async (newProject) => {
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(newProject),
+    headers: {
+      'Content-Type': 'application/json'
+    } 
+  }
+  const response = await fetch('http://palette-pick-be.herokuapp.com/api/v1/projects', options)
+  const data = await response.json();
+  return data
+}
