@@ -1,8 +1,8 @@
 import { getProjects , getPalettes, postPalette, deletePalette } from './apiCalls';
 
 describe('apiCalls.js', () => {
-  describe('getProjects', () => {
 
+  describe('getProjects', () => {
     let mockResponse = {
       "results": [
         {
@@ -62,6 +62,58 @@ describe('apiCalls.js', () => {
 
       expect(getProjects(mockUrl)).rejects.toEqual(Error("Error"))
     })
+  })
+
+  describe('getPalettes', () => {
+    let mockResponse = {
+      "results": [
+        {
+          "id": 3,
+          "name": "Animal Coats",
+          "created_at": "2019-12-03T22:17:16.388Z",
+          "updated_at": "2019-12-03T22:17:16.388Z"
+        }
+      ]
+    }
+
+    beforeEach(() => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(mockResponse)
+        });
+      });
+    });
+
+    it('should fetch with correct url', () => {
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/palettes'
+
+      getPalettes(mockUrl)
+
+      expect(window.fetch).toHaveBeenCalledWith(mockUrl)
+    })
+
+    it('should return an array of palettes (HAPPY)', () => {
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/palettes'
+
+      getPalettes(mockUrl)
+      .then(results => expect(results).toEqual(mockResponse))
+    })
+
+    it('should return an error (SAD)', () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: false,
+          statusText: "Error"
+        })
+      })
+
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/palette'
+
+      expect(getPalettes(mockUrl)).rejects.toEqual(Error("Error"))
+    })
 
   })
+
+
 })
