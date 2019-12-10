@@ -23,7 +23,8 @@ html {
 .Modal {
   background-color: #000000;
   padding: 8%;
-  height: 300vh;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .modalClose {
