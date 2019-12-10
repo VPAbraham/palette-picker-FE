@@ -12,7 +12,7 @@ const Projects = (props) => {
         return palette.projects_id === project.id
       })
       let palmap = specPal.map((pal) => {
-        return <div className="palList"><h4>{pal.name.toUpperCase()}</h4><button className="modal-delete">DELETE</button></div>
+        return <div className="palList"><h4>{pal.name.toUpperCase()}</h4><button className="modal-delete" onClick={() => deletePalette(pal.id)}>DELETE</button></div>
       })
       return <div><div className="projList"><h2>{project.name.toUpperCase()}</h2><button className="modal-delete">DELETE</button></div>{palmap}</div>
     })
