@@ -5,6 +5,7 @@ import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
 import Projects from '../Projects/Projects';
 import PaletteForm from '../PaletteForm/PaletteForm';
+import ProjectForm from '../ProjectForm/ProjectForm';
 import { getColors } from '../apiCalls/apiCallsColors';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
@@ -22,7 +23,8 @@ class App extends Component {
       color5: '#41406d',
       modalIsOpen: false,
       palettes: [],
-      projects: []
+      projects: [],
+      creatingProj: false
     }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -43,7 +45,6 @@ class App extends Component {
     });
   }
 
-
   refreshColors = async () => {
     const newPalette = await getColors();
     this.setState({
@@ -57,11 +58,11 @@ class App extends Component {
 
   openModal() {
     this.setState({ modalIsOpen: true });
-  }
+  };
 
   closeModal() {
     this.setState({ modalIsOpen: false });
-  }
+  };
 
   render() {
     return(
@@ -89,16 +90,9 @@ class App extends Component {
               color4={this.state.color4}
               color5={this.state.color5}
               projects={this.state.projects}
+              key="palette-form"
             />
-            <div className="menu-items">
-              <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
-              <h1>CREATE NEW PROJECT</h1>
-            </div>
-            <div className="menu-items">
-              <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
-              <h1>VIEW ALL PROJECTS</h1>
-            </div>
-            <Projects
+            <ProjectForm 
               palettes={this.state.palettes}
               projects={this.state.projects}
             />
@@ -111,6 +105,7 @@ class App extends Component {
             color3={this.state.color3}
             color4={this.state.color4}
             color5={this.state.color5}
+            key="palette"
           />
         </main>
       </div>
