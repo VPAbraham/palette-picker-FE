@@ -1,5 +1,6 @@
 import React from 'react';
 import './Projects.scss';
+import { deletePalette } from '../apiCalls/apiCalls';
 
 const Projects = (props) => {
   const projects = props.projects
