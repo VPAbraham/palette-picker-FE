@@ -6,11 +6,6 @@
   div {
     overflow-y: scroll;
   }
-
-  .color {
-    height: 5vh;
-    width: 5vh;
-  }
 }
 
 h2 {
@@ -20,6 +15,7 @@ h2 {
   font-size: 1em;
   letter-spacing: 15px;
   line-height: 55px;
+  margin: 0 25px 0 0;
   text-align: left;
 }
 
@@ -30,6 +26,7 @@ h4 {
   font-size: .75em;
   letter-spacing: 7.5px;
   line-height: 45px;
+  margin: 0 20px 0 25px;
   text-align: left;
 }
 

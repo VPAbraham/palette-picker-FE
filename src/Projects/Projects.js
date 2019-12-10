@@ -1,5 +1,5 @@
 import React from 'react';
-import Color from '../Color/Color';
+import ColorSmall from '../ColorSmall/ColorSmall';
 import './Projects.scss';
 import { deletePalette } from '../apiCalls/apiCalls';
 
@@ -14,11 +14,11 @@ const Projects = (props) => {
       })
       let palmap = specPal.map((pal) => {
         return <div className="palList">
-          <Color key="1" color={pal.color1} />
-          <Color key="2" color={pal.color2} />
-          <Color key="3" color={pal.color3} />
-          <Color key="4" color={pal.color4} />
-          <Color key="5" color={pal.color5} />
+          <ColorSmall key="1" color={pal.color1} />
+          <ColorSmall key="2" color={pal.color2} />
+          <ColorSmall key="3" color={pal.color3} />
+          <ColorSmall key="4" color={pal.color4} />
+          <ColorSmall key="5" color={pal.color5} />
           <h4>{pal.name.toUpperCase()}</h4>
           <button className="modal-delete" onClick={() => deletePalette(pal.id)}>DELETE</button>
         </div>
