@@ -175,7 +175,32 @@ describe('apiCalls.js', () => {
 
       expect(postPalette(mockUrl)).rejects.toEqual(Error("Error"))
     })
+  })
 
+  describe('deletePalette', () => {
+    let mockResponse = "Project with an id of 5 successfully deleted."
+
+    beforeEach(() => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: true
+        })
+      })
+    })
+
+    it('should be called with the correct arguments', () => {
+      const id = 1
+      const expected = [`http://palette-pick-be.herokuapp.com/api/v1/palettes/${1}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }]
+
+      deletePalette(id)
+
+      expect(window.fetch).toHaveBeenCalledWith(...expected)
+    })
   })
 
 })
