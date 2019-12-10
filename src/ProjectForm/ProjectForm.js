@@ -45,22 +45,28 @@ class ProjectForm extends Component {
           <h1>CREATE NEW PROJECT</h1>
         </div>
         {this.state.creatingProj &&
-        <div className="proj-name-input">
-          <input className="proj-name-input" 
-          onChange={(e) => this.handleChange(e)}
-          placeholder="New Project Name">
-          </input>
-          <button onClick={(e) => this.submitProject(e)}>SUBMIT</button>
-        </div>
+          <div className="proj-name-input">
+            <input className="proj-name-input" 
+            onChange={(e) => this.handleChange(e)}
+            placeholder="New Project Name">
+            </input>
+            <button onClick={(e) => this.submitProject(e)}>SUBMIT</button>
+          </div>
         }
         <div className="menu-items">
-          <img src={whitePlus} alt="white plus symbol" className="modalPlus" />
+          <img src={this.state.viewingProj ? whiteClose : whitePlus} 
+          onClick={() => this.setState({ viewingProj: !this.state.viewingProj })}
+          alt="white plus symbol" 
+          className="modalPlus" />
           <h1>VIEW ALL PROJECTS</h1>
         </div>
-        <Projects
-          palettes={this.props.palettes}
-          projects={this.props.projects}
-        />
+        {this.state.viewingProj &&
+          <Projects
+            palettes={this.props.palettes}
+            projects={this.props.projects}
+          />  
+        }
+
       </section>
     )
   }
