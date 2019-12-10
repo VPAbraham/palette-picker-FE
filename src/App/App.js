@@ -64,6 +64,9 @@ class App extends Component {
     this.setState({ modalIsOpen: false });
   };
 
+  selectPalette() {
+  }
+
   render() {
     return(
       <div className="App" id="root">
@@ -79,7 +82,7 @@ class App extends Component {
         >
           <img src={whiteClose} onClick={this.closeModal} alt="white x symbol" className="modalClose"/>
           <section className="menu">
-            
+
             <PaletteForm
               color1={this.state.color1}
               color2={this.state.color2}
@@ -89,9 +92,10 @@ class App extends Component {
               projects={this.state.projects}
               key="palette-form"
             />
-            <ProjectForm 
+            <ProjectForm
               palettes={this.state.palettes}
               projects={this.state.projects}
+              selectPalette={this.selectPalette}
             />
           </section>
         </Modal>

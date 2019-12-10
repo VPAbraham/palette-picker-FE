@@ -69,6 +69,7 @@ class ProjectForm extends Component {
           <Projects
             palettes={this.props.palettes}
             projects={this.props.projects}
+            selectPalette={this.props.selectPalette}
           />
         }
 
