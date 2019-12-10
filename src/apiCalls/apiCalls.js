@@ -20,3 +20,14 @@ export const postPalette = async (newPalette) => {
   const data = await response.json();
     return data
 }
+
+export const deletePalette = async (paletteId) => {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/palettes/${paletteId}`, options);
+  return response
+}
