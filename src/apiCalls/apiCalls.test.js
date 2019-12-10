@@ -112,8 +112,50 @@ describe('apiCalls.js', () => {
 
       expect(getPalettes(mockUrl)).rejects.toEqual(Error("Error"))
     })
-
   })
 
+  describe('postPalette', () => {
+    let mockResponse = {
+      name: "Fall",
+      color1: "#FFFFFF",
+      color2: "#000000",
+      color3: "#688780",
+      color4: "#BA3EH9",
+      color5: "#008800"
+    }
+
+    beforeEach(() => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok:true,
+          json: () => Promise.resolve(mockResponse)
+        })
+      })
+    })
+
+    it('should fetch with the correct arguments', () => {
+      const mockUrl = `http://palette-pick-be.herokuapp.com/api/v1/palettes`
+      const mockPalette = {
+        name: "Fall",
+        color1: "#FFFFFF",
+        color2: "#000000",
+        color3: "#688780",
+        color4: "#BA3EH9",
+        color5: "#008800"
+      }
+      const expected = [mockUrl, {
+        method: 'POST',
+        body: JSON.stringify(mockPalette),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }]
+
+      postPalette(mockPalette)
+
+      expect(window.fetch).toHaveBeenCalledWith(...expected)
+    })
+
+  })
 
 })
