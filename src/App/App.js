@@ -5,6 +5,7 @@ import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
 import { getColors } from '../apiCalls/apiCallsColors';
 import PaletteForm from '../PaletteForm/PaletteForm';
+import ProjectForm from '../ProjectForm/ProjectForm';
 import whiteClose from '../assets/images/close_white.svg';
 import whitePlus from '../assets/images/plus_white.svg';
 import { getProjects, getPalettes } from '../apiCalls/apiCalls';
@@ -43,7 +44,6 @@ class App extends Component {
     });
   }
 
-
   refreshColors = async () => {
     const newPalette = await getColors();
     this.setState({
@@ -57,11 +57,11 @@ class App extends Component {
 
   openModal() {
     this.setState({ modalIsOpen: true });
-  }
+  };
 
   closeModal() {
     this.setState({ modalIsOpen: false });
-  }
+  };
 
   render() {
     return(
@@ -91,24 +91,7 @@ class App extends Component {
               projects={this.state.projects}
               key="palette-form"
             />
-            <div className="menu-items">
-              <img src={whitePlus} 
-              onClick={() => this.setState({creatingProj: !this.state.creatingProj})} 
-              alt="white plus symbol" 
-              className="modalPlus"
-              />
-              <h1>CREATE NEW PROJECT</h1>
-            </div>
-            {this.state.creatingProj&&
-              <div className="proj-name-input">
-                <input className="proj-name-input" placeholder="New Project Name"></input>
-                <button>SUBMIT</button>
-              </div>
-            }
-            <div className="menu-items">
-              <img src={whitePlus} alt="white plus symbol" className="modalPlus"/>
-              <h1>VIEW ALL PROJECTS</h1>
-            </div>
+            <ProjectForm />
           </section>
         </Modal>
         <main>

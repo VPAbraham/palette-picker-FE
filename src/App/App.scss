@@ -47,16 +47,16 @@ h1 {
   flex-direction: column;
 
   .proj-name-input {
-    width: 55%;
+    width: 60%;
 
-    img {
-      width: 70%;
+    input {
+      width: 50%;
       transition: .6s;
+      margin: 0 4%;
     }
 
     button {
       font-size: 16px;
-      margin-left: 20px;
       padding: 1em;
       width: 30%;
     }
