@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './ProjectForm.scss';
 import { postProject } from '../apiCalls/apiCalls';
 import whitePlus from '../assets/images/plus_white.svg';
+import whiteClose from '../assets/images/close_white.svg';
 
 
 class ProjectForm extends Component {
@@ -33,7 +34,7 @@ class ProjectForm extends Component {
     return(
       <section className="project-form">
         <div className="menu-items">
-          <img src={whitePlus}
+          <img src={this.state.creatingProj ? whiteClose : whitePlus}
             onClick={() => this.setState({ creatingProj: !this.state.creatingProj })}
             alt="white plus symbol"
             className="modalPlus"
@@ -50,6 +51,7 @@ class ProjectForm extends Component {
         </div>
         }
         <div className="menu-items">
+          
           <img src={whitePlus} alt="white plus symbol" className="modalPlus" />
           <h1>VIEW ALL PROJECTS</h1>
         </div>
