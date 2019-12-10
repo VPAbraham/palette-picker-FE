@@ -46,7 +46,7 @@ class ProjectForm extends Component {
           <h1>CREATE NEW PROJECT</h1>
         </div>
         {this.state.creatingProj &&
-          <div>
+          <div className="project-dropdown">
             <h2>PROJECT NAME</h2>
             <div className="proj-name-input">
               <input className="proj-name-input"
