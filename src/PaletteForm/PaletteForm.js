@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './PaletteForm.scss';
 import { postPalette } from '../apiCalls/apiCalls';
+import whitePlus from '../assets/images/plus_white.svg';
+import whiteClose from '../assets/images/close_white.svg';
 
 class PaletteForm extends Component {
   constructor(props) {
@@ -9,7 +11,7 @@ class PaletteForm extends Component {
       paletteName: '',
       projectName: '',
       error: '',
-      creatingProj: false
+      savingPalette: false
     }
     this.props = props;
   }
@@ -75,23 +77,34 @@ class PaletteForm extends Component {
   render() {
     return(
       <form className="palette-form">
-        <h2>PALETTE NAME</h2>
-        <input
-          className="palette-name-input"
-          type="text"
-          placeholder="Enter Palette Name"
-          name="paletteName"
-          value={this.state.paletteName}
-          onChange={this.handleChange}
-        />
-        <h2>SELECT PROJECT</h2>
-        <div className="dropdown">
-          <button className="drop-menu" onClick={(e) => this.doNothing(e)}>Select Project</button>
-          <div className="dropdown-content">
-            {this.getProjectNames()}
-          </div>
+        <div className="menu-items">
+          <img src={this.state.savingPalette ? whiteClose : whitePlus}
+          onClick={() => this.setState({ savingPalette: !this.state.savingPalette})} 
+          alt="white plus symbol" 
+          className="modalPlus" />
+          <h1>SAVE PALETTE</h1>
         </div>
-        <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
+        {this.state.savingPalette && 
+        <div>
+          <h2>PALETTE NAME</h2>
+          <input
+            className="palette-name-input"
+            type="text"
+            placeholder="Enter Palette Name"
+            name="paletteName"
+            value={this.state.paletteName}
+            onChange={this.handleChange}
+          />
+          <h2>SELECT PROJECT</h2>
+          <div className="dropdown">
+            <button className="drop-menu" onClick={(e) => this.doNothing(e)}>Select Project</button>
+            <div className="dropdown-content">
+              {this.getProjectNames()}
+            </div>
+          </div>
+          <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
+        </div>
+        }  
       </form>
     )
   }

@@ -23,6 +23,8 @@ html {
 .Modal {
   background-color: #000000;
   padding: 8%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .modalClose {
@@ -45,18 +47,20 @@ h1 {
   flex-direction: column;
 
   .proj-name-input {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
 
     input {
-      width: 50%;
+      width: 100%;
       transition: .6s;
-      margin: 0 4%;
     }
 
     button {
       font-size: 16px;
       padding: 1em;
-      width: 30%;
+      width: 25%;
+      margin: 3em 0 2em 0;
     }
   }
 }
