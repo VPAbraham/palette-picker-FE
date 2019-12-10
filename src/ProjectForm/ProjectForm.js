@@ -23,12 +23,13 @@ class ProjectForm extends Component {
 
   submitProject = (e) => {
     e.preventDefault();
-    if(this.newProjName !== 0) {
+    if(this.state.newProjName.length !== 0) {
       const projectObj = {
         name: this.state.newProjName
       }
       console.log(projectObj)
       postProject(projectObj)
+      this.setState({newProjName: ''})
     }
   }
 
@@ -46,7 +47,8 @@ class ProjectForm extends Component {
         </div>
         {this.state.creatingProj &&
           <div className="proj-name-input">
-            <input className="proj-name-input" 
+            <input className="proj-name-input"
+            value={this.state.newProjName} 
             onChange={(e) => this.handleChange(e)}
             placeholder="New Project Name">
             </input>
