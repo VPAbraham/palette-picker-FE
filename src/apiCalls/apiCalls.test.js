@@ -134,7 +134,7 @@ describe('apiCalls.js', () => {
     })
 
     it('should fetch with the correct arguments', () => {
-      const mockUrl = `http://palette-pick-be.herokuapp.com/api/v1/palettes`
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/palettes'
       const mockPalette = {
         name: "Fall",
         color1: "#FFFFFF",
@@ -154,6 +154,13 @@ describe('apiCalls.js', () => {
       postPalette(mockPalette)
 
       expect(window.fetch).toHaveBeenCalledWith(...expected)
+    })
+
+    it('should post a palette (HAPPY)', () => {
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/palettes'
+
+      postPalette(mockUrl)
+      .then(results => expect(results).toEqual(mockResponse))
     })
 
   })
