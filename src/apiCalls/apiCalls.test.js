@@ -50,5 +50,18 @@ describe('apiCalls.js', () => {
       .then(results => expect(results).toEqual(mockResponse))
     })
 
+    it('should return an error (SAD)', () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: false,
+          statusText: "Error"
+        })
+      })
+
+      const mockUrl = 'http://palette-pick-be.herokuapp.com/api/v1/project'
+
+      expect(getProjects(mockUrl)).rejects.toEqual(Error("Error"))
+    })
+
   })
 })
