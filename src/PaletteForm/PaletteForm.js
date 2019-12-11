@@ -80,11 +80,11 @@ export class PaletteForm extends Component {
 
     return(
       <form className="palette-form">
-        <div 
-        onClick={() => this.setState({ savingPalette: !this.state.savingPalette })}         
+        <div
+        onClick={() => this.setState({ savingPalette: !this.state.savingPalette })}
         className="menu-items">
           <img src={this.state.savingPalette ? whiteClose : whitePlus}
-          alt="white plus symbol" 
+          alt="white plus symbol"
           className="modalPlus" />
           <h1>SAVE PALETTE</h1>
         </div>
