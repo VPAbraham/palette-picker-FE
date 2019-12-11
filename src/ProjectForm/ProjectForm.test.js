@@ -22,5 +22,4 @@ describe('ProjectForm', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('should ')
 });

@@ -43,11 +43,21 @@ p {
 .palList {
   align-items: center;
   display: flex;
+  margin-left: 4%;
+}
+
+.modal-delete, 
+.modal-delete-small {
+  border-radius: 0px;
+  margin-right: 12px;
 }
 
 .modal-delete {
-  border-radius: 0px;
   height: 20px;
+}
+
+.modal-delete-small {
+  height: 15px;
 }
 
 .all-swatches {
