@@ -44,7 +44,7 @@ export class ProjectForm extends Component {
       console.log(domObject)
       const currState = this.state.projects
       currState.push(domObject)
-      this.setState({ 
+      this.setState({
         newProjName: '',
         projects: currState
       })
@@ -82,13 +82,16 @@ export class ProjectForm extends Component {
           <h1>CREATE NEW PROJECT</h1>
         </div>
         {this.state.creatingProj &&
-          <div className="proj-name-input">
-            <input className="proj-name-input"
-              value={this.state.newProjName}
-              onChange={(e) => this.handleChange(e)}
-              placeholder="New Project Name">
-            </input>
-            <button onClick={(e) => this.submitProject(e)}>SUBMIT</button>
+          <div className="project-dropdown">
+            <div className="proj-name-input">
+            <h2>PROJECT NAME</h2>
+              <input className="proj-name-input"
+                value={this.state.newProjName}
+                onChange={(e) => this.handleChange(e)}
+                placeholder="New Project Name">
+              </input>
+              <button onClick={(e) => this.submitProject(e)}>SUBMIT</button>
+            </div>
           </div>
         }
         <div className="menu-items">
