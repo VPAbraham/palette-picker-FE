@@ -1,11 +1,19 @@
-export const getProjects = () => {
-  return fetch('http://palette-pick-be.herokuapp.com/api/v1/projects')
-    .then(res => res.json())
+export const getProjects = async() => {
+  const response = await fetch('http://palette-pick-be.herokuapp.com/api/v1/projects')
+  try {
+    return response.json()
+  } catch {
+    throw Error(response.statusText)
+  }
 }
 
-export const getPalettes = () => {
-  return fetch('http://palette-pick-be.herokuapp.com/api/v1/palettes')
-    .then(res => res.json())
+export const getPalettes = async() => {
+  const response = await fetch('http://palette-pick-be.herokuapp.com/api/v1/palettes')
+  try {
+    return response.json()
+  } catch {
+    throw Error(response.statusText)
+  }
 }
 
 export const postPalette = async (newPalette) => {
@@ -17,8 +25,11 @@ export const postPalette = async (newPalette) => {
     }
   }
   const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/palettes`, options)
-  const data = await response.json();
-  return data
+  try {
+    return response.json()
+  } catch {
+    throw Error(response.statusText)
+  }
 }
 
 export const deletePalette = async (paletteId) => {
@@ -29,7 +40,11 @@ export const deletePalette = async (paletteId) => {
     }
   }
   const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/palettes/${paletteId}`, options);
-  return response
+  try {
+    return response.json()
+  } catch {
+    throw Error(response.statusText)
+  }
 }
 
 export const postProject = async (newProject) => {
@@ -41,9 +56,11 @@ export const postProject = async (newProject) => {
     }
   }
   const response = await fetch('http://palette-pick-be.herokuapp.com/api/v1/projects', options)
-  const data = await response.json();
-  console.log(`Project with an id of ${data} has been added.`)
-  return data
+  try {
+    return response.json()
+  } catch {
+    throw Error(response.statusText)
+  }
 }
 
 export const deleteProject = async (projectId) => {
@@ -54,6 +71,9 @@ export const deleteProject = async (projectId) => {
     }
   }
   const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/projects/${projectId}`, options)
-  const data = await response.json()
-  return data
+  try {
+    return response.json()
+  } catch {
+    throw Error(response.statusText)
+  }
 }
