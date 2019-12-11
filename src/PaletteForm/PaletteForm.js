@@ -79,13 +79,13 @@ class PaletteForm extends Component {
       <form className="palette-form">
         <div className="menu-items">
           <img src={this.state.savingPalette ? whiteClose : whitePlus}
-          onClick={() => this.setState({ savingPalette: !this.state.savingPalette})} 
-          alt="white plus symbol" 
+          onClick={() => this.setState({ savingPalette: !this.state.savingPalette})}
+          alt="white plus symbol"
           className="modalPlus" />
           <h1>SAVE PALETTE</h1>
         </div>
-        {this.state.savingPalette && 
-        <div>
+        {this.state.savingPalette &&
+        <div className="palette-dropdown">
           <h2>PALETTE NAME</h2>
           <input
             className="palette-name-input"
@@ -104,7 +104,7 @@ class PaletteForm extends Component {
           </div>
           <button className="save-palette" onClick={(e) => this.submitForm(e)}> SAVE </button>
         </div>
-        }  
+        }
       </form>
     )
   }
