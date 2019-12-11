@@ -3,7 +3,7 @@ import './Nav.scss';
 import blackPlus from '../assets/images/plus_black.svg';
 import refresh from '../assets/images/refresh.svg';
 
-const Nav = (props) => {
+export const Nav = (props) => {
 
   const colorChange = (e) => {
     e.preventDefault();

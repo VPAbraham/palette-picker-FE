@@ -1,7 +1,7 @@
 import React from 'react';
 import './Color.scss';
 
-const Color = (props) => {
+export const Color = (props) => {
   const style = {
     background: props.color
   }

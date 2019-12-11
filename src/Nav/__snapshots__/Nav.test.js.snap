@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav should match the snapshot with all data passed in 1`] = `
+<header
+  className="Nav"
+>
+  <div>
+    <h1>
+      PALE
+      <span>
+        <img
+          alt="plus sign"
+          src="plus_black.svg"
+        />
+      </span>
+      <span>
+        <img
+          alt="plus sign"
+          src="plus_black.svg"
+        />
+      </span>
+      E
+    </h1>
+    <h1>
+      PICKER
+    </h1>
+  </div>
+  <section
+    className="nav-controls"
+  >
+    <img
+      alt="refresh icon"
+      className="refresh"
+      onClick={[Function]}
+      src="refresh.svg"
+    />
+    <img
+      alt="black plus symbol"
+      className="add-project"
+      onClick={[MockFunction]}
+      src="plus_black.svg"
+    />
+  </section>
+</header>
+`;

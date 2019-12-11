@@ -4,7 +4,7 @@ import { postPalette } from '../apiCalls/apiCalls';
 import whitePlus from '../assets/images/plus_white.svg';
 import whiteClose from '../assets/images/close_white.svg';
 
-class PaletteForm extends Component {
+export class PaletteForm extends Component {
   constructor(props) {
     super();
     this.state = {

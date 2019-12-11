@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Palette should match the snapshot with all data passed in 1`] = `
+<section
+  className="palette"
+>
+  <Color
+    color="#baddc3"
+    position="color1"
+  />
+  <Color
+    color="#d8ac97"
+    position="color2"
+  />
+  <Color
+    color="#993f42"
+    position="color3"
+  />
+  <Color
+    color="#b4r35"
+    position="color4"
+  />
+  <Color
+    color="#ff6767"
+    position="color5"
+  />
+</section>
+`;
