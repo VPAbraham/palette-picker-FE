@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 import './App.scss';
 import Nav from '../Nav/Nav';
 import Palette from '../Palette/Palette';
-import Projects from '../Projects/Projects';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import ProjectForm from '../ProjectForm/ProjectForm';
 import { getColors } from '../apiCalls/apiCallsColors';
@@ -24,7 +23,8 @@ class App extends Component {
       modalIsOpen: false,
       palettes: [],
       projects: [],
-      creatingProj: false
+      creatingProj: false,
+      hover: false
     }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -56,12 +56,28 @@ class App extends Component {
     });
   };
 
+  refreshPalettes = (newPalette) => {
+    // this.setState({ palettes: newPalettes })
+    console.log(newPalette)
+  }
+
   openModal() {
     this.setState({ modalIsOpen: true });
   };
 
   closeModal() {
     this.setState({ modalIsOpen: false });
+  };
+
+  selectPalette = (color1, color2, color3, color4, color5) => {
+    this.setState({
+      color1: color1,
+      color2: color2,
+      color3: color3,
+      color4: color4,
+      color5: color5,
+      hover: true
+    });
   };
 
   render() {
@@ -79,7 +95,7 @@ class App extends Component {
         >
           <img src={whiteClose} onClick={this.closeModal} alt="white x symbol" className="modalClose"/>
           <section className="menu">
-            
+
             <PaletteForm
               color1={this.state.color1}
               color2={this.state.color2}
@@ -87,11 +103,14 @@ class App extends Component {
               color4={this.state.color4}
               color5={this.state.color5}
               projects={this.state.projects}
+              refreshPalettes={this.refreshPalettes}
               key="palette-form"
             />
-            <ProjectForm 
+            <ProjectForm
               palettes={this.state.palettes}
               projects={this.state.projects}
+              selectPalette={this.selectPalette}
+              hover={this.state.hover}
             />
           </section>
         </Modal>

@@ -33,7 +33,6 @@ export const deletePalette = async (paletteId) => {
 }
 
 export const postProject = async (newProject) => {
-  console.log('working....')
   const options = {
     method: 'POST',
     body: JSON.stringify(newProject),
@@ -42,8 +41,21 @@ export const postProject = async (newProject) => {
     } 
   }
   const response = await fetch('http://palette-pick-be.herokuapp.com/api/v1/projects', options)
-  console.log(response)
   const data = await response.json();
+  console.log(`Project with an id of ${data} has been added.`)
+  return data
+}
+
+export const deleteProject = async (projectId) => {
+  console.log(projectId)
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  const response = await fetch(`http://palette-pick-be.herokuapp.com/api/v1/projects/${projectId}`, options)
+  const data = await response.json()
   console.log(data)
   return data
 }

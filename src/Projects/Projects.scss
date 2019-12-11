@@ -1,6 +1,7 @@
 .Projects {
   display: flex;
   flex-direction: column;
+  margin-left: 3em;
   width: 75%;
 
   div {
@@ -15,6 +16,7 @@ h2 {
   font-size: 1em;
   letter-spacing: 15px;
   line-height: 55px;
+  margin: 0 25px 0 0;
   text-align: left;
 }
 
@@ -25,6 +27,7 @@ h4 {
   font-size: .75em;
   letter-spacing: 7.5px;
   line-height: 45px;
+  margin: 0 20px 0 25px;
   text-align: left;
 }
 
@@ -45,4 +48,13 @@ p {
 .modal-delete {
   border-radius: 0px;
   height: 20px;
+}
+
+.all-swatches {
+  display: flex;
+}
+
+.hover {
+  display: flex;
+  border: 2px solid white;
 }
