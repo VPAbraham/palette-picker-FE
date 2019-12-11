@@ -7,14 +7,24 @@ import whiteClose from '../assets/images/close_white.svg';
 
 
 class ProjectForm extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       creatingProj: false,
       viewingProj: false,
-      newProjName: ''
+      newProjName: '',
+      projects: [],
+      palettes: []
     }
   }
+
+  componentDidMount() {
+    this.setState({
+      projects: this.props.projects,
+      palettes: this.props.palettes
+    })
+  }
+
 
   handleChange = (e) => {
     e.preventDefault();
@@ -27,14 +37,31 @@ class ProjectForm extends Component {
       const projectObj = {
         name: this.state.newProjName
       }
-      console.log(projectObj)
       postProject(projectObj)
       this.setState({newProjName: ''})
     }
   }
 
+  removeProject = (id) => {
+    const currentProjects = this.state.projects;
+    console.log(currentProjects)
+    let newProjects = currentProjects.filter(project => {
+      return project.id !== id
+    })
+    console.log(newProjects)
+    this.setState({projects: newProjects})
+  }
+
+  removePalette = (id) => {
+    const currentPalettes = this.state.palettes;
+    console.log(currentPalettes)
+    let newPalettes = currentPalettes.filter(palette => {
+      return palette.id !== id
+    })
+    this.setState({palettes: newPalettes})
+  }
+
   render() {
-    console.log(this.props)
     return(
       <section className="project-form">
         <div className="menu-items">
@@ -64,8 +91,10 @@ class ProjectForm extends Component {
         </div>
         {this.state.viewingProj &&
           <Projects
-            palettes={this.props.palettes}
-            projects={this.props.projects}
+            palettes={this.state.palettes}
+            projects={this.state.projects}
+            removeProject={this.removeProject}
+            removePalette={this.removePalette}
           />  
         }
 
