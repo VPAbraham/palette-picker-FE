@@ -6,7 +6,7 @@ import whitePlus from '../assets/images/plus_white.svg';
 import whiteClose from '../assets/images/close_white.svg';
 
 
-class ProjectForm extends Component {
+export class ProjectForm extends Component {
   constructor() {
     super();
     this.state = {

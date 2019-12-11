@@ -5,7 +5,7 @@ import { deletePalette, deleteProject } from '../apiCalls/apiCalls';
 
 
 
-const Projects = (props) => {
+export const Projects = (props) => {
   const { removeProject, removePalette, projects, palettes, hover } = props;
 
   const delProj = async (projectId) => {
