@@ -86,7 +86,7 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           />
         </div>
         <h4>
-          PAL1
+          PAL2
         </h4>
         <button
           className="modal-delete"
@@ -154,7 +154,7 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           />
         </div>
         <h4>
-          PAL1
+          PAL3
         </h4>
         <button
           className="modal-delete"

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectForm should match the snapshot with all data passed in 1`] = `
+<section
+  className="project-form"
+>
+  <div
+    className="menu-items"
+  >
+    <img
+      alt="white plus symbol"
+      className="modalPlus"
+      onClick={[Function]}
+      src="plus_white.svg"
+    />
+    <h1>
+      CREATE NEW PROJECT
+    </h1>
+  </div>
+  <div
+    className="menu-items"
+  >
+    <img
+      alt="white plus symbol"
+      className="modalPlus"
+      onClick={[Function]}
+      src="plus_white.svg"
+    />
+    <h1>
+      VIEW ALL PROJECTS
+    </h1>
+  </div>
+</section>
+`;
