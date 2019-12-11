@@ -6,11 +6,11 @@ exports[`ProjectForm should match the snapshot with all data passed in 1`] = `
 >
   <div
     className="menu-items"
+    onClick={[Function]}
   >
     <img
       alt="white plus symbol"
       className="modalPlus"
-      onClick={[Function]}
       src="plus_white.svg"
     />
     <h1>
