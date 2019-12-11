@@ -25,6 +25,13 @@ describe('apiCallsColors', () => {
       expect(window.fetch).toHaveBeenCalledWith(mockUrl)
     })
 
+    it('should return an array of colors (HAPPY)', () => {
+      const mockUrl = 'http://www.colr.org/json/colors/random/5'
+
+      getColors(mockUrl)
+      .then(results => expect(results).toEqual(mockResponse))
+    })
+
   })
 
 })
