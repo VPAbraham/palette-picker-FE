@@ -40,40 +40,44 @@ describe('ProjectForm', () => {
     expect(wrapper.state('paletteName')).toEqual('Fish')
   })
 
-  // it('should update projectName in state when handleClick is called', () => {
-  //   const mockEvent = {
-  //     preventDefault: jest.fn(),
-  //     target: {
-  //       name: 'projectName',
-  //       value: 'Sea',
-  //       innerText: 'Select Project'
-  //     }
-  //   }
-  //
-  //   wrapper.instance().getProjectNames()
-  //   wrapper.instance().handleClick(mockEvent)
-  //
-  //   expect(wrapper.state('projectName')).toEqual('Sea')
-  // })
+  it('should update projectName in state when handleClick is called', () => {
+    const mockEvent = {
+      preventDefault: jest.fn(),
+      target: {
+        name: 'projectName',
+        value: 'Sea',
+        innerText: 'Sea'
+      }
+    }
 
-  // it('should reset paletteName, projectName, and error in state when resetAllInputs is called', () => {
-  //   const defaultState = {
-  //     paletteName: 'Fish',
-  //     projectName: 'Sea',
-  //     error: 'Maybe an error here'
-  //   }
-  //
-  //   const expectedState = {
-  //     paletteName: '',
-  //     projectName: '',
-  //     error: ''
-  //   }
-  //
-  //   wrapper.instance().setState(defaultState)
-  //   wrapper.instance().resetAllInputs()
-  //
-  //   expect(wrapper.state()).toEqual(expectedState)
-  // })
+    wrapper.instance().getProjectNames()
+    wrapper.instance().handleClick(mockEvent)
+
+    expect(wrapper.state('projectName')).toEqual('Sea')
+  })
+
+  it('should reset paletteName, projectName, and error in state when resetAllInputs is called', () => {
+    const defaultState = {
+      paletteName: 'Fish',
+      projectName: 'Sea',
+      error: 'Maybe an error here',
+      savingPalette: false,
+      buttonText: 'Select Project'
+    }
+
+    const expectedState = {
+      paletteName: '',
+      projectName: '',
+      error: '',
+      savingPalette: false,
+      buttonText: 'Select Project'
+    }
+
+    wrapper.instance().setState(defaultState)
+    wrapper.instance().resetAllInputs()
+
+    expect(wrapper.state()).toEqual(expectedState)
+  })
 
   it('should call submitForm when the save palette button is clicked', () => {
     const mockEvent = { preventDefault: jest.fn() };
