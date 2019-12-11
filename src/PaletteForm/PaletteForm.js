@@ -11,7 +11,8 @@ export class PaletteForm extends Component {
       paletteName: '',
       projectName: '',
       error: '',
-      savingPalette: false
+      savingPalette: false,
+      buttonText: 'Select Project'
     }
     this.props = props;
   }
@@ -57,18 +58,15 @@ export class PaletteForm extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    var selectedProject = document.querySelector(".drop-menu");
-    selectedProject.innerText = e.target.innerText
-    this.setState({ projectName: e.target.innerText })
+    this.setState({ projectName: e.target.innerText, buttonText: e.target.innerText })
   }
 
   resetAllInputs = () => {
-    var selectedProject = document.querySelector(".drop-menu");
-    selectedProject.innerText = "Select Project"
     this.setState({
       paletteName: '',
       projectName: '',
-      error: ''
+      error: '',
+      buttonText: 'Select Project'
     })
   }
 
@@ -80,11 +78,11 @@ export class PaletteForm extends Component {
 
     return(
       <form className="palette-form">
-        <div 
-        onClick={() => this.setState({ savingPalette: !this.state.savingPalette })}         
+        <div
+        onClick={() => this.setState({ savingPalette: !this.state.savingPalette })}
         className="menu-items">
           <img src={this.state.savingPalette ? whiteClose : whitePlus}
-          alt="white plus symbol" 
+          alt="white plus symbol"
           className="modalPlus" />
           <h1>SAVE PALETTE</h1>
         </div>
@@ -101,7 +99,7 @@ export class PaletteForm extends Component {
           />
           <h2>SELECT PROJECT</h2>
           <div className="dropdown">
-            <button className="drop-menu" onClick={(e) => this.doNothing(e)}>Select Project</button>
+            <button className="drop-menu" onClick={(e) => this.doNothing(e)}>{this.state.buttonText}</button>
             <div className="dropdown-content">
               {this.getProjectNames()}
             </div>
