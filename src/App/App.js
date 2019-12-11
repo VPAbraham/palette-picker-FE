@@ -56,6 +56,16 @@ class App extends Component {
     });
   };
 
+  refreshPalettes = (newPalette) => {
+    const allPalettes = this.state.palettes;
+    if(newPalette.name) {
+      allPalettes.push(newPalette);
+      this.setState({palettes: allPalettes})  
+    }
+    // this.setState({ palettes: newPalettes })
+    console.log(newPalette)
+  }
+
   openModal() {
     this.setState({ modalIsOpen: true });
   };
@@ -98,6 +108,7 @@ class App extends Component {
               color4={this.state.color4}
               color5={this.state.color5}
               projects={this.state.projects}
+              refreshPalettes={this.refreshPalettes}
               key="palette-form"
             />
             <ProjectForm

@@ -30,6 +30,7 @@ class PaletteForm extends Component {
   }
 
   submitForm = (e) => {
+    const { refreshPalettes } = this.props;
     e.preventDefault();
     if (!this.state.paletteName && !this.state.projectName) {
       this.setState({ error: "Please fill out all inputs to log in."} )
@@ -44,6 +45,7 @@ class PaletteForm extends Component {
         color5: this.props.color5
       }
       postPalette(newPalette)
+      refreshPalettes(newPalette)
       this.resetAllInputs()
     }
   }
@@ -75,12 +77,14 @@ class PaletteForm extends Component {
   }
 
   render() {
+
     return(
       <form className="palette-form">
-        <div className="menu-items">
+        <div 
+        onClick={() => this.setState({ savingPalette: !this.state.savingPalette })}         
+        className="menu-items">
           <img src={this.state.savingPalette ? whiteClose : whitePlus}
-          onClick={() => this.setState({ savingPalette: !this.state.savingPalette})}
-          alt="white plus symbol"
+          alt="white plus symbol" 
           className="modalPlus" />
           <h1>SAVE PALETTE</h1>
         </div>
