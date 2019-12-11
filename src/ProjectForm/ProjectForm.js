@@ -37,9 +37,10 @@ class ProjectForm extends Component {
     console.log(this.props)
     return(
       <section className="project-form">
-        <div className="menu-items">
+        <div 
+        onClick={() => this.setState({ creatingProj: !this.state.creatingProj })}
+        className="menu-items">
           <img src={this.state.creatingProj ? whiteClose : whitePlus}
-            onClick={() => this.setState({ creatingProj: !this.state.creatingProj })}
             alt="white plus symbol"
             className="modalPlus"
           />
@@ -55,9 +56,10 @@ class ProjectForm extends Component {
             <button onClick={(e) => this.submitProject(e)}>SUBMIT</button>
           </div>
         }
-        <div className="menu-items">
+        <div 
+        onClick={() => this.setState({ viewingProj: !this.state.viewingProj })}
+        className="menu-items">
           <img src={this.state.viewingProj ? whiteClose : whitePlus} 
-          onClick={() => this.setState({ viewingProj: !this.state.viewingProj })}
           alt="white plus symbol" 
           className="modalPlus" />
           <h1>VIEW ALL PROJECTS</h1>
