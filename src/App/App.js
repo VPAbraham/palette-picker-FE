@@ -23,7 +23,8 @@ class App extends Component {
       modalIsOpen: false,
       palettes: [],
       projects: [],
-      creatingProj: false
+      creatingProj: false,
+      hover: false
     }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -69,7 +70,8 @@ class App extends Component {
       color2: color2,
       color3: color3,
       color4: color4,
-      color5: color5
+      color5: color5,
+      hover: true
     });
   };
 
@@ -88,7 +90,6 @@ class App extends Component {
         >
           <img src={whiteClose} onClick={this.closeModal} alt="white x symbol" className="modalClose"/>
           <section className="menu">
-
             <PaletteForm
               color1={this.state.color1}
               color2={this.state.color2}
@@ -102,6 +103,7 @@ class App extends Component {
               palettes={this.state.palettes}
               projects={this.state.projects}
               selectPalette={this.selectPalette}
+              hover={this.state.hover}
             />
           </section>
         </Modal>
