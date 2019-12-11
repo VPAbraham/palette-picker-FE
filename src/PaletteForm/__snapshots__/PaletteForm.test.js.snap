@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectForm should match the snapshot with all data passed in 1`] = `
+<form
+  className="palette-form"
+>
+  <div
+    className="menu-items"
+  >
+    <img
+      alt="white plus symbol"
+      className="modalPlus"
+      onClick={[Function]}
+      src="plus_white.svg"
+    />
+    <h1>
+      SAVE PALETTE
+    </h1>
+  </div>
+</form>
+`;
