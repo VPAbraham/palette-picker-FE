@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color should match the snapshot with all data passed in 1`] = `
+<div
+  className="color1"
+  id="color"
+  style={
+    Object {
+      "background": "#baddc3",
+    }
+  }
+/>
+`;
