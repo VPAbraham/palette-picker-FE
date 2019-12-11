@@ -41,7 +41,12 @@
       transition: .5s;
 
       &:hover {
-        transform: rotate(1turn);
+        transform: rotate(360deg);
+      }
+
+      &:active {
+        transition: .05s;
+        transform: rotate(420deg);
       }
     }
   }

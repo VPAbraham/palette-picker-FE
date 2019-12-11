@@ -14,7 +14,6 @@ class PaletteForm extends Component {
       savingPalette: false
     }
     this.props = props;
-    const { refreshPalettes } = this.props;
   }
 
   getProjectNames = () => {
@@ -31,6 +30,7 @@ class PaletteForm extends Component {
   }
 
   submitForm = (e) => {
+    const { refreshPalettes } = this.props;
     e.preventDefault();
     if (!this.state.paletteName && !this.state.projectName) {
       this.setState({ error: "Please fill out all inputs to log in."} )
@@ -45,7 +45,7 @@ class PaletteForm extends Component {
         color5: this.props.color5
       }
       postPalette(newPalette)
-      this.refreshPalettes(newPalette)
+      refreshPalettes(newPalette)
       this.resetAllInputs()
     }
   }
