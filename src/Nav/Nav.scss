@@ -37,6 +37,14 @@
       width: 4vw;
     }
 
+    .add-project {
+
+      &:active {
+        transition: 0.5s;
+        transform: rotate(-50deg);
+      }
+    }
+
     .refresh {
       transition: .5s;
 
