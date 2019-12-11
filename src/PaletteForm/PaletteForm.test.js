@@ -18,6 +18,7 @@ describe('ProjectForm', () => {
       color3={'#993f42'}
       color4={'#b4r35'}
       color5={'#ff6767'}
+      refreshPalettes={jest.fn()}
       key='palette-form'
     />)
   });
@@ -93,5 +94,24 @@ describe('ProjectForm', () => {
     wrapper.find('.save-palette').simulate('click', mockEvent);
 
     expect(wrapper.instance().submitForm).toHaveBeenCalled();
+  })
+
+  it('should call resetAllInputs when submitForm is called', () => {
+    const defaultState = {
+      paletteName: 'Fish',
+      projectName: 'Sea',
+      error: 'Maybe an error here',
+      savingPalette: false,
+      buttonText: 'Select Project'
+    }
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.instance().resetAllInputs = jest.fn()
+    wrapper.instance().getSelectedProjectId = jest.fn()
+    wrapper.instance().postPalette = jest.fn()
+
+    wrapper.instance().setState(defaultState)
+    wrapper.instance().submitForm(mockEvent)
+
+    expect(wrapper.instance().resetAllInputs).toHaveBeenCalled()
   })
 });

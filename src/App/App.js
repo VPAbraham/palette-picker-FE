@@ -60,7 +60,7 @@ class App extends Component {
     const allPalettes = this.state.palettes;
     if(newPalette.name) {
       allPalettes.push(newPalette);
-      this.setState({palettes: allPalettes})  
+      this.setState({palettes: allPalettes})
     }
     // this.setState({ palettes: newPalettes })
     console.log(newPalette)
