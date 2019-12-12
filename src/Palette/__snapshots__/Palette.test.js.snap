@@ -6,22 +6,27 @@ exports[`Palette should match the snapshot with all data passed in 1`] = `
 >
   <Color
     color="#baddc3"
+    key="#baddc3"
     position="color1"
   />
   <Color
     color="#d8ac97"
+    key="#d8ac97"
     position="color2"
   />
   <Color
     color="#993f42"
+    key="#993f42"
     position="color3"
   />
   <Color
     color="#b4r35"
+    key="#b4r35"
     position="color4"
   />
   <Color
     color="#ff6767"
+    key="#ff6767"
     position="color5"
   />
 </section>

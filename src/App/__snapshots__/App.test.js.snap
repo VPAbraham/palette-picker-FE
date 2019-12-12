@@ -16,6 +16,7 @@ exports[`App should match the snapshot with all data passed in 1`] = `
     closeTimeoutMS={0}
     contentLabel="Example Modal"
     isOpen={false}
+    key="Modal"
     onRequestClose={[Function]}
     parentSelector={[Function]}
     portalClassName="ReactModalPortal"
@@ -46,6 +47,7 @@ exports[`App should match the snapshot with all data passed in 1`] = `
       />
       <ProjectForm
         hover={false}
+        key="ProjectForm"
         palettes={Array []}
         projects={Array []}
         selectPalette={[Function]}

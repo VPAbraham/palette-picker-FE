@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import './ProjectForm.scss';
 import Projects from '../Projects/Projects';
 import { postProject } from '../apiCalls/apiCalls';
@@ -30,8 +30,7 @@ export class ProjectForm extends Component {
     this.setState({ newProjName: e.target.value })
   }
 
-  submitProject = async (e) => {
-    e.preventDefault();
+  submitProject = async () => {
     if (this.state.newProjName.length !== 0) {
       const projectObj = {
         name: this.state.newProjName
@@ -41,7 +40,6 @@ export class ProjectForm extends Component {
         id: projectId[0],
         name: projectObj.name
       }
-      console.log(domObject)
       const currState = this.state.projects
       currState.push(domObject)
       this.setState({
@@ -53,17 +51,14 @@ export class ProjectForm extends Component {
 
   removeProject = (id) => {
     const currentProjects = this.state.projects;
-    console.log(currentProjects)
     let newProjects = currentProjects.filter(project => {
       return project.id !== id
     })
-    console.log(newProjects)
     this.setState({ projects: newProjects })
   }
 
   removePalette = (id) => {
     const currentPalettes = this.state.palettes;
-    console.log(currentPalettes)
     let newPalettes = currentPalettes.filter(palette => {
       return palette.id !== id
     })
@@ -107,6 +102,7 @@ export class ProjectForm extends Component {
             projects={this.state.projects}
             removeProject={this.removeProject}
             removePalette={this.removePalette}
+            key="projects"
           />
         }
 
