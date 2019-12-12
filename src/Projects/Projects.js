@@ -26,7 +26,7 @@ export const Projects = (props) => {
       })
       let palmap = specPal.map((pal) => {
         return <div className="palList">
-          <div className={hover ? "hover" : "all-swatches"} onClick={() => props.selectPalette(pal.color1, pal.color2, pal.color3, pal.color4, pal.color5)}>
+          <div className={"all-swatches"} onClick={() => props.selectPalette(pal.color1, pal.color2, pal.color3, pal.color4, pal.color5)}>
             <img src={trash} onClick={() => delPal(pal.id)} className="modal-delete-small" alt="trashcan" />
             <ColorSmall key="pal.color" color={pal.color1} />
             <ColorSmall key="pal.color2" color={pal.color2} />

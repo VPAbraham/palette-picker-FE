@@ -7,7 +7,7 @@ import whiteClose from '../assets/images/close_white.svg';
 
 
 export class ProjectForm extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       creatingProj: false,
@@ -16,6 +16,7 @@ export class ProjectForm extends Component {
       projects: [],
       palettes: []
     }
+    this.props = props
   }
 
   componentDidMount() {
@@ -102,6 +103,7 @@ export class ProjectForm extends Component {
             projects={this.state.projects}
             removeProject={this.removeProject}
             removePalette={this.removePalette}
+            selectPalette={this.props.selectPalette}
             key="projects"
           />
         }
