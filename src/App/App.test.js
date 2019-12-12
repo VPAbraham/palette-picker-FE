@@ -19,10 +19,6 @@ describe('App', () => {
   it('should match the snapshot with all data passed in', () => {
     let wrapper = shallow(<App />)
     expect(wrapper).toMatchSnapshot();
-<<<<<<< HEAD
-  });
-});
-=======
   })
 
   it('should update color1 in state when refreshPalettes is called', () => {
@@ -196,4 +192,3 @@ describe('App', () => {
     expect(wrapper.state('color5')).toEqual('#FFFFFF')
   })
 })
->>>>>>> master

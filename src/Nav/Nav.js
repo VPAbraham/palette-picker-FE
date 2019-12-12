@@ -6,7 +6,6 @@ import refresh from '../assets/images/refresh.svg';
 export const Nav = (props) => {
 
   const colorChange = (e) => {
-    console.log(e)
     e.preventDefault();
     props.refreshColors();
   }

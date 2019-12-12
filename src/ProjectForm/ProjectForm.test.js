@@ -53,7 +53,6 @@ describe('ProjectForm', () => {
     wrapper.setState({newProjName: 'Fall Shtuff'})
     wrapper.instance().submitProject()
     expect(wrapper.state('newProjName')).toEqual('Fall Shtuff')
-    console.log(wrapper.state('projects'))
     expect(wrapper.state('projects').length).toEqual(3)
-  })
+  });
 });
