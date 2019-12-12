@@ -13,5 +13,5 @@ describe('App', () => {
   it('should match the snapshot with all data passed in', () => {
     let wrapper = shallow(<App />)
     expect(wrapper).toMatchSnapshot();
-  })
-})
+  });
+});

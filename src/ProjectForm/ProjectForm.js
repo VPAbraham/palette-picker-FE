@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import './ProjectForm.scss';
 import Projects from '../Projects/Projects';
 import { postProject } from '../apiCalls/apiCalls';
@@ -30,8 +30,7 @@ export class ProjectForm extends Component {
     this.setState({ newProjName: e.target.value })
   }
 
-  submitProject = async (e) => {
-    e.preventDefault();
+  submitProject = async () => {
     if (this.state.newProjName.length !== 0) {
       const projectObj = {
         name: this.state.newProjName

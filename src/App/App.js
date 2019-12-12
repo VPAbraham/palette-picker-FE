@@ -8,7 +8,6 @@ import ProjectForm from '../ProjectForm/ProjectForm';
 import { getColors } from '../apiCalls/apiCallsColors';
 import whiteClose from '../assets/images/close_white.svg';
 import { getProjects, getPalettes } from '../apiCalls/apiCalls';
-Modal.setAppElement('#root')
 
 class App extends Component {
   constructor() {

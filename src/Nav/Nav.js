@@ -9,7 +9,6 @@ export const Nav = (props) => {
     console.log(e)
     e.preventDefault();
     props.refreshColors();
-    
   }
 
   return (

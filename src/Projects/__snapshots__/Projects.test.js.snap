@@ -9,15 +9,15 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
       <div
         className="projList"
       >
+        <img
+          alt="trashcan"
+          className="modal-delete"
+          onClick={[Function]}
+          src="trash.svg"
+        />
         <h2>
           FALL COLORS
         </h2>
-        <button
-          className="modal-delete"
-          onClick={[Function]}
-        >
-          DELETE
-        </button>
       </div>
       <div
         className="palList"
@@ -26,6 +26,12 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           className="hover"
           onClick={[Function]}
         >
+          <img
+            alt="trashcan"
+            className="modal-delete-small"
+            onClick={[Function]}
+            src="trash.svg"
+          />
           <ColorSmall
             color="#baddc3"
             key="1"
@@ -50,12 +56,6 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
         <h4>
           PAL1
         </h4>
-        <button
-          className="modal-delete"
-          onClick={[Function]}
-        >
-          DELETE
-        </button>
       </div>
       <div
         className="palList"
@@ -64,6 +64,12 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           className="hover"
           onClick={[Function]}
         >
+          <img
+            alt="trashcan"
+            className="modal-delete-small"
+            onClick={[Function]}
+            src="trash.svg"
+          />
           <ColorSmall
             color="#ab7146"
             key="1"
@@ -88,42 +94,36 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
         <h4>
           PAL2
         </h4>
-        <button
-          className="modal-delete"
-          onClick={[Function]}
-        >
-          DELETE
-        </button>
       </div>
     </div>
     <div>
       <div
         className="projList"
       >
+        <img
+          alt="trashcan"
+          className="modal-delete"
+          onClick={[Function]}
+          src="trash.svg"
+        />
         <h2>
           OCEAN VIBES
         </h2>
-        <button
-          className="modal-delete"
-          onClick={[Function]}
-        >
-          DELETE
-        </button>
       </div>
     </div>
     <div>
       <div
         className="projList"
       >
+        <img
+          alt="trashcan"
+          className="modal-delete"
+          onClick={[Function]}
+          src="trash.svg"
+        />
         <h2>
           SEEING RED
         </h2>
-        <button
-          className="modal-delete"
-          onClick={[Function]}
-        >
-          DELETE
-        </button>
       </div>
       <div
         className="palList"
@@ -132,6 +132,12 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           className="hover"
           onClick={[Function]}
         >
+          <img
+            alt="trashcan"
+            className="modal-delete-small"
+            onClick={[Function]}
+            src="trash.svg"
+          />
           <ColorSmall
             color="#993f42"
             key="1"
@@ -156,12 +162,6 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
         <h4>
           PAL3
         </h4>
-        <button
-          className="modal-delete"
-          onClick={[Function]}
-        >
-          DELETE
-        </button>
       </div>
     </div>
   </div>
