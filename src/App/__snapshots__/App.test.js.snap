@@ -41,12 +41,11 @@ exports[`App should match the snapshot with all data passed in 1`] = `
         color3="#ffe596"
         color4="#b3e6ff"
         color5="#41406d"
-        key="palette-form"
+        key="PaletteForm"
         projects={Array []}
         refreshPalettes={[Function]}
       />
       <ProjectForm
-        hover={false}
         key="ProjectForm"
         palettes={Array []}
         projects={Array []}

@@ -10,11 +10,6 @@ it('renders without crashing', () => {
 });
 
 describe('App', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    let wrapper = shallow(<App />)
-  })
 
   it('should match the snapshot with all data passed in', () => {
     let wrapper = shallow(<App />)

@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 
 describe('Nav', () => {
   let wrapper;
-  const colorChange = jest.fn();
   const refreshColorsMock = jest.fn();
   beforeEach(() => {
     wrapper = shallow(<Nav
