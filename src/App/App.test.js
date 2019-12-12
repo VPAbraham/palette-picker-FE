@@ -126,4 +126,69 @@ describe('App', () => {
 
     expect(wrapper.state('modalIsOpen')).toEqual(false)
   })
+
+  it('should set color1 in state when selectPalette is called', () => {
+    let wrapper = shallow(<App />)
+    let color1 = '#FFFFFF'
+    let color2 = '#000000'
+    let color3 = '#FFFFFF'
+    let color4 = '#000000'
+    let color5 = '#FFFFFF'
+
+    wrapper.instance().selectPalette(color1, color2, color3, color4, color5)
+
+    expect(wrapper.state('color1')).toEqual('#FFFFFF')
+  })
+
+  it('should set color2 in state when selectPalette is called', () => {
+    let wrapper = shallow(<App />)
+    let color1 = '#FFFFFF'
+    let color2 = '#000000'
+    let color3 = '#FFFFFF'
+    let color4 = '#000000'
+    let color5 = '#FFFFFF'
+
+    wrapper.instance().selectPalette(color1, color2, color3, color4, color5)
+
+    expect(wrapper.state('color2')).toEqual('#000000')
+  })
+
+  it('should set color3 in state when selectPalette is called', () => {
+    let wrapper = shallow(<App />)
+    let color1 = '#FFFFFF'
+    let color2 = '#000000'
+    let color3 = '#FFFFFF'
+    let color4 = '#000000'
+    let color5 = '#FFFFFF'
+
+    wrapper.instance().selectPalette(color1, color2, color3, color4, color5)
+
+    expect(wrapper.state('color3')).toEqual('#FFFFFF')
+  })
+
+  it('should set color4 in state when selectPalette is called', () => {
+    let wrapper = shallow(<App />)
+    let color1 = '#FFFFFF'
+    let color2 = '#000000'
+    let color3 = '#FFFFFF'
+    let color4 = '#000000'
+    let color5 = '#FFFFFF'
+
+    wrapper.instance().selectPalette(color1, color2, color3, color4, color5)
+
+    expect(wrapper.state('color4')).toEqual('#000000')
+  })
+
+  it('should set color5 in state when selectPalette is called', () => {
+    let wrapper = shallow(<App />)
+    let color1 = '#FFFFFF'
+    let color2 = '#000000'
+    let color3 = '#FFFFFF'
+    let color4 = '#000000'
+    let color5 = '#FFFFFF'
+
+    wrapper.instance().selectPalette(color1, color2, color3, color4, color5)
+
+    expect(wrapper.state('color5')).toEqual('#FFFFFF')
+  })
 })
