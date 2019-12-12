@@ -22,7 +22,6 @@ describe('App', () => {
   })
 
   it('should update color1 in state when refreshPalettes is called', () => {
-
     let wrapper = shallow(<App />)
 
     const mockPalette = {
@@ -41,7 +40,6 @@ describe('App', () => {
   })
 
   it('should update color2 in state when refreshPalettes is called', () => {
-
     let wrapper = shallow(<App />)
 
     const mockPalette = {
@@ -60,7 +58,6 @@ describe('App', () => {
   })
 
   it('should update color3 in state when refreshPalettes is called', () => {
-
     let wrapper = shallow(<App />)
 
     const mockPalette = {
@@ -79,7 +76,6 @@ describe('App', () => {
   })
 
   it('should update color4 in state when refreshPalettes is called', () => {
-
     let wrapper = shallow(<App />)
 
     const mockPalette = {
@@ -98,7 +94,6 @@ describe('App', () => {
   })
 
   it('should update color5 in state when refreshPalettes is called', () => {
-
     let wrapper = shallow(<App />)
 
     const mockPalette = {
@@ -114,5 +109,21 @@ describe('App', () => {
     wrapper.instance().refreshPalettes(mockPalette)
 
     expect(wrapper.state('color5')).toEqual('#41406d')
+  })
+
+  it('should set state to true when openModal is called', () => {
+    let wrapper = shallow(<App />)
+
+    wrapper.instance().openModal()
+
+    expect(wrapper.state('modalIsOpen')).toEqual(true)
+  })
+
+  it('should set state to false when closeModal is called', () => {
+    let wrapper = shallow(<App />)
+
+    wrapper.instance().closeModal()
+
+    expect(wrapper.state('modalIsOpen')).toEqual(false)
   })
 })
