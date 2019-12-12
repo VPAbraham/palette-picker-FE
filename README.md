@@ -1,4 +1,4 @@
-# Palette Picker
+# Palette Picker FE
 
 Palette Picker is a React App allows users to view color palettes, name and save them in projects.
 
