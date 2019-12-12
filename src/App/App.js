@@ -60,8 +60,6 @@ class App extends Component {
       allPalettes.push(newPalette);
       this.setState({palettes: allPalettes})
     }
-    // this.setState({ palettes: newPalettes })
-    console.log(newPalette)
   }
 
   openModal() {
