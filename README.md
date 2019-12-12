@@ -10,7 +10,7 @@ Palette Picker is a React App allows users to view color palettes, name and save
 
 - Connecting BE & FE repositories using CORS.
 
-- multiple environments:
+- ultiple environments:
   - Testing.
   - Making use of automatic continuous integration with TravisCI
 deployment with Heroku.
@@ -24,7 +24,8 @@ keeping track of MVP features and nice-to-have features.
   - Exploring git rebase and squashing.
   - Highly semantic, specific, professional documentation (README, API documentation, etc).
  
- ## Planning
+### Planning
+
  In developing our plan, we used Githubs built in projects board, in a kanban style.
  [See our project board here](https://github.com/users/VPAbraham/projects/1)
  
@@ -38,10 +39,6 @@ keeping track of MVP features and nice-to-have features.
  ![Data map](https://user-images.githubusercontent.com/30779453/70680657-1e56ed80-1c56-11ea-826f-aeb1faca1a01.png)
 
 ### Screenshots
-Data Map
-- To begin, the overall data flow and necessary components are mapped out.
-
-![Palette Picker data map](src/images/)
 
 InVision Prototype
 - Next, a design is implemented and basic user flow is considered. Here is a clickable InVision Prototype: Click on a movies from the home screen then the main logo to get back.
@@ -57,8 +54,6 @@ Project and palette creation
 
 Browse your saved palettes and projects
 ![Browse your saved palettes and projects](https://user-images.githubusercontent.com/30779453/70680204-ab994280-1c54-11ea-9ca8-50cafd256b9e.png)
-
-
 
 ### Tech
 
