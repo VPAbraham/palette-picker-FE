@@ -8,7 +8,6 @@ import ProjectForm from '../ProjectForm/ProjectForm';
 import { getColors } from '../apiCalls/apiCallsColors';
 import whiteClose from '../assets/images/close_white.svg';
 import { getProjects, getPalettes } from '../apiCalls/apiCalls';
-Modal.setAppElement('#root')
 
 class App extends Component {
   constructor() {
@@ -61,8 +60,6 @@ class App extends Component {
       allPalettes.push(newPalette);
       this.setState({palettes: allPalettes})
     }
-    // this.setState({ palettes: newPalettes })
-    console.log(newPalette)
   }
 
   openModal() {
@@ -96,6 +93,7 @@ class App extends Component {
           onRequestClose={this.closeModal}
           className="Modal"
           contentLabel="Example Modal"
+          key="Modal"
         >
           <img src={whiteClose} onClick={this.closeModal} alt="white x symbol" className="modalClose"/>
           <section className="menu">
@@ -108,13 +106,14 @@ class App extends Component {
               color5={this.state.color5}
               projects={this.state.projects}
               refreshPalettes={this.refreshPalettes}
-              key="palette-form"
+              key="PaletteForm"
             />
             <ProjectForm
               palettes={this.state.palettes}
               projects={this.state.projects}
               selectPalette={this.selectPalette}
               hover={this.state.hover}
+              key="ProjectForm"
             />
           </section>
         </Modal>

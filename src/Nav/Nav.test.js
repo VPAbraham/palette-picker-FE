@@ -14,7 +14,6 @@ describe('Nav', () => {
   });
 
   it('should match the snapshot with all data passed in', () => {
-    console.log(wrapper)
     expect(wrapper).toMatchSnapshot();
   });
 

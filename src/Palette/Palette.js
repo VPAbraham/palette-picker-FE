@@ -42,11 +42,11 @@ export class Palette extends Component {
   render() {
     return (
       <section className="palette">
-        <Color position="color1" color={this.state.color1}/>
-        <Color position="color2" color={this.state.color2}/>
-        <Color position="color3" color={this.state.color3}/>
-        <Color position="color4" color={this.state.color4}/>
-        <Color position="color5" color={this.state.color5}/>
+        <Color position="color1" color={this.state.color1} key={this.state.color1}/>
+        <Color position="color2" color={this.state.color2} key={this.state.color2}/>
+        <Color position="color3" color={this.state.color3} key={this.state.color3}/>
+        <Color position="color4" color={this.state.color4} key={this.state.color4}/>
+        <Color position="color5" color={this.state.color5} key={this.state.color5}/>
       </section>
     )
   }

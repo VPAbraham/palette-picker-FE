@@ -22,4 +22,37 @@ describe('ProjectForm', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should update project name in state when handleChange is called', () => {
+    const mockEvent = {
+      preventDefault: jest.fn(),
+      target: {
+        value: 'Some Fall Stuff'
+      }
+    }
+    wrapper.instance().handleChange(mockEvent);
+    expect(wrapper.state('newProjName')).toEqual('Some Fall Stuff')
+  })
+
+  it('should remove a palette by id from state when removePalette is called', () => {
+    const origPalettes = wrapper.state('palettes');
+    expect(origPalettes.length).toEqual(3);
+    wrapper.instance().removePalette(6);
+    const expectedPalettes = wrapper.state('palettes');
+    expect(expectedPalettes.length).toEqual(2);
+  })
+
+  it('should remove a project by id from state when removeProject is called', () => {
+    const origProjects = wrapper.state('projects');
+    expect(origProjects.length).toEqual(3);
+    wrapper.instance().removeProject(20);
+    const expectedProjects = wrapper.state('projects');
+    expect(expectedProjects.length).toEqual(2);
+  })
+
+  it('should submit a new project when submitProject is called', () => {
+    wrapper.setState({newProjName: 'Fall Shtuff'})
+    wrapper.instance().submitProject()
+    expect(wrapper.state('newProjName')).toEqual('Fall Shtuff')
+    expect(wrapper.state('projects').length).toEqual(3)
+  });
 });

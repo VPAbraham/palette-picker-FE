@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all data passed in 1`] = `
+<div
+  className="App"
+  id="root"
+>
+  <Nav
+    openModal={[Function]}
+    refreshColors={[Function]}
+  />
+  <Modal
+    ariaHideApp={true}
+    bodyOpenClassName="ReactModal__Body--open"
+    className="Modal"
+    closeTimeoutMS={0}
+    contentLabel="Example Modal"
+    isOpen={false}
+    key="Modal"
+    onRequestClose={[Function]}
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    role="dialog"
+    shouldCloseOnEsc={true}
+    shouldCloseOnOverlayClick={true}
+    shouldFocusAfterRender={true}
+    shouldReturnFocusAfterClose={true}
+  >
+    <img
+      alt="white x symbol"
+      className="modalClose"
+      onClick={[Function]}
+      src="close_white.svg"
+    />
+    <section
+      className="menu"
+    >
+      <PaletteForm
+        color1="#baddc3"
+        color2="#ff6767"
+        color3="#ffe596"
+        color4="#b3e6ff"
+        color5="#41406d"
+        key="palette-form"
+        projects={Array []}
+        refreshPalettes={[Function]}
+      />
+      <ProjectForm
+        hover={false}
+        key="ProjectForm"
+        palettes={Array []}
+        projects={Array []}
+        selectPalette={[Function]}
+      />
+    </section>
+  </Modal>
+  <main>
+    <Palette
+      color1="#baddc3"
+      color2="#ff6767"
+      color3="#ffe596"
+      color4="#b3e6ff"
+      color5="#41406d"
+      key="palette"
+    />
+  </main>
+</div>
+`;
