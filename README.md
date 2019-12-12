@@ -56,7 +56,7 @@ InVision Prototype
 
 https://projects.invisionapp.com/prototype/ck3vt0vk700dgef01pfzx9mcb/play
 
-Homepage
+Live Site
 
 - Palette Picker home page
 
