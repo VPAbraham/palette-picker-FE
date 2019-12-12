@@ -23,7 +23,7 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
         className="palList"
       >
         <div
-          className="hover"
+          className="all-swatches"
           onClick={[Function]}
         >
           <img
@@ -34,23 +34,23 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           />
           <ColorSmall
             color="#baddc3"
-            key="1"
+            key="pal.color"
           />
           <ColorSmall
             color="#ff6767"
-            key="2"
+            key="pal.color2"
           />
           <ColorSmall
             color="#ffe596"
-            key="3"
+            key="pal.color3"
           />
           <ColorSmall
             color="#b3e6ff"
-            key="4"
+            key="pal.color4"
           />
           <ColorSmall
             color="#632ad7"
-            key="5"
+            key="pal.color5"
           />
         </div>
         <h4>
@@ -61,7 +61,7 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
         className="palList"
       >
         <div
-          className="hover"
+          className="all-swatches"
           onClick={[Function]}
         >
           <img
@@ -72,23 +72,23 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           />
           <ColorSmall
             color="#ab7146"
-            key="1"
+            key="pal.color"
           />
           <ColorSmall
             color="#b3e6ff"
-            key="2"
+            key="pal.color2"
           />
           <ColorSmall
             color="#41406d"
-            key="3"
+            key="pal.color3"
           />
           <ColorSmall
             color="#b3e66tr"
-            key="4"
+            key="pal.color4"
           />
           <ColorSmall
             color="#41406d"
-            key="5"
+            key="pal.color5"
           />
         </div>
         <h4>
@@ -129,7 +129,7 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
         className="palList"
       >
         <div
-          className="hover"
+          className="all-swatches"
           onClick={[Function]}
         >
           <img
@@ -140,23 +140,23 @@ exports[`Projects should match the snapshot with all data passed in 1`] = `
           />
           <ColorSmall
             color="#993f42"
-            key="1"
+            key="pal.color"
           />
           <ColorSmall
             color="#d8ac97"
-            key="2"
+            key="pal.color2"
           />
           <ColorSmall
             color="#4e6cc4"
-            key="3"
+            key="pal.color3"
           />
           <ColorSmall
             color="#b4r35"
-            key="4"
+            key="pal.color4"
           />
           <ColorSmall
             color="#41406d"
-            key="5"
+            key="pal.color5"
           />
         </div>
         <h4>

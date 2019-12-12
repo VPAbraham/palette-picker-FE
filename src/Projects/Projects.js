@@ -7,7 +7,7 @@ import trash from '../assets/images/trash.svg';
 
 
 export const Projects = (props) => {
-  const { removeProject, removePalette, projects, palettes, hover } = props;
+  const { removeProject, removePalette, projects, palettes} = props;
 
   const delProj = async (projectId) => {
     await deleteProject(projectId);

@@ -21,8 +21,7 @@ class App extends Component {
       modalIsOpen: false,
       palettes: [],
       projects: [],
-      creatingProj: false,
-      hover: false
+      creatingProj: false
     }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -76,8 +75,7 @@ class App extends Component {
       color2: color2,
       color3: color3,
       color4: color4,
-      color5: color5,
-      hover: true
+      color5: color5
     });
   };
 
@@ -112,7 +110,6 @@ class App extends Component {
               palettes={this.state.palettes}
               projects={this.state.projects}
               selectPalette={this.selectPalette}
-              hover={this.state.hover}
               key="ProjectForm"
             />
           </section>

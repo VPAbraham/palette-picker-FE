@@ -178,7 +178,6 @@ describe('apiCalls.js', () => {
   })
 
   describe('deletePalette', () => {
-    let mockResponse = "Palette with an id of 5 successfully deleted."
 
     beforeEach(() => {
       window.fetch = jest.fn().mockImplementation(() => {
@@ -217,7 +216,6 @@ describe('apiCalls.js', () => {
   })
 
   describe('deleteProject', () => {
-    let mockResponse = "Project with an id of 5 successfully deleted."
 
     beforeEach(() => {
       window.fetch = jest.fn().mockImplementation(() => {
